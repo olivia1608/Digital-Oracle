@@ -1,3 +1,3 @@
 <?php
-$koneksi = mysqli_connect("localhost", "root", "", "Digital-Oracle");
+$koneksi = mysqli_connect("localhost", "root", "", "digitaloracle");
 ?>
