@@ -176,7 +176,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="keranjang.php">
-          <i class="bi bi-envelope"></i>
+          <i class="<bi bi-bag"></i>
           <span>Keranjang</span>
         </a>
       </li><!-- End Keranjang Page Nav -->
@@ -190,14 +190,14 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="laporan.php">
-          <i class="bi bi-box-arrow-in-right"></i>
+         <i class="bi bi-layout-text-sidebar-reverse"></i>
           <span>Laporan</span>
         </a>
       </li><!-- End Laporan Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pengguna.php">
-          <i class="bi bi-dash-circle"></i>
+         <i class="bi bi-person-fill"></i>
           <span>Pengguna</span>
         </a>
       </li><!-- End Pengguna Page Nav -->
@@ -268,7 +268,7 @@
 
               </div>
             </div><!-- End Sales Card -->
-
+            
             <!-- Revenue Card -->
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card revenue-card">
