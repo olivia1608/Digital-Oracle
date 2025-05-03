@@ -70,7 +70,7 @@ if (isset($_POST["simpan"])) {
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">digitaloracle</span>
+        <span class="d-none d-lg-block">DigitalOracle</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -271,7 +271,7 @@ if (isset($_POST["simpan"])) {
             </div>
           </div>
         </div>
-      </div>        
+      </div>
     </section>
 
   </main><!-- End #main -->
@@ -286,7 +286,7 @@ if (isset($_POST["simpan"])) {
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://instagram.com/olicia_chyn/" target="_blank">OliviaCahyaniAgustina</a>
+      Designed by <a href="https://instagram.com/olivia_chyn/" target="_blank">OliviaCahyaniAgustina</a>
     </div>
   </footer><!-- End Footer -->
 
