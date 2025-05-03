@@ -254,7 +254,7 @@ if (isset($_POST["simpan"])) {
                                 <div class="col-12">
                                     <label for="nm_kategori" class="form-label">Nama Kategori</label>
                                     <input type="text" class="form-control" id="nm_kategorii" name="nm_kategori"
-                                    placeholder="Masukkan Nama Kategori Produk" value="<?php echo $data['nm_kategori']; ?>">
+                                        placeholder="Masukkan Nama Kategori Produk" value="<?php echo $data['nm_kategori']; ?>">
                                 </div>
                                 <div class="text-center">
                                     <button type="reset" class="btn btn-secondary">Reset</button>
