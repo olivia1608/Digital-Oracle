@@ -149,7 +149,7 @@ if (isset($_POST["simpan"])) {
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <img src="assets/img/ft profil.jpg" alt="Profile" class="rounded-circle">
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -190,28 +190,28 @@ if (isset($_POST["simpan"])) {
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="kategori produk.php">
-          <i class="bi bi-person"></i>
+          <i class="bi bi-calendar4-week"></i>
           <span>Kategori Produk</span>
         </a>
       </li><!-- End Kategori Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="produk.php">
-          <i class="bi bi-align-start"></i>
+          <i class="bi bi-shop"></i>
           <span>Produk</span>
         </a>
       </li><!-- End Produk Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="keranjang.php">
-          <i class="<bi bi-bag"></i>
+          <i class="bi bi-cart"></i>
           <span>Keranjang</span>
         </a>
       </li><!-- End Keranjang Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="transaksi.php">
-          <i class="bi bi-card-list"></i>
+          <i class="bi bi-receipt"></i>
           <span>Transaksi</span>
         </a>
       </li><!-- End Transaksi Page Nav -->
@@ -255,16 +255,16 @@ if (isset($_POST["simpan"])) {
               <form class="row g-3 mt-2" method="post">
                 <div class="col-12">
                   <label for="nm_kategori"
-                  class="form-label">Nama Kategori</label>
+                    class="form-label">Nama Kategori</label>
                   <input type="text" class="form-control"
-                  id="nm_kategorii" name="nm_kategori"
-                  placeholder="Masukkan Nama Kategori Produk">
+                    id="nm_kategorii" name="nm_kategori"
+                    placeholder="Masukkan Nama Kategori Produk">
                 </div>
                 <div class="text-center">
                   <button type="reset" class="btn
                   btn-secondary">Reset</button>
                   <button type="submit" class="btn btn-primary"
-                  name="simpan">Simpan</button>
+                    name="simpan">Simpan</button>
                 </div>
               </form>
 
