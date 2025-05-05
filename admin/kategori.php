@@ -67,65 +67,6 @@
                     </a>
                 </li><!-- End Search Icon-->
 
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-                    <li class="dropdown-header">
-                        You have 3 new messages
-                        <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-
-                    <li class="message-item">
-                        <a href="#">
-                            <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-                            <div>
-                                <h4>Maria Hudson</h4>
-                                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                                <p>4 hrs. ago</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-
-                    <li class="message-item">
-                        <a href="#">
-                            <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                            <div>
-                                <h4>Anna Nelson</h4>
-                                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                                <p>6 hrs. ago</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-
-                    <li class="message-item">
-                        <a href="#">
-                            <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                            <div>
-                                <h4>David Muldon</h4>
-                                <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                                <p>8 hrs. ago</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-
-                    <li class="dropdown-footer">
-                        <a href="#">Show all messages</a>
-                    </li>
-
-                </ul><!-- End Messages Dropdown Items -->
-
-                </li><!-- End Messages Nav -->
-
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
@@ -258,17 +199,14 @@
                                     $no = 1;
 
                                     // Cek apakah ada pencarian
-                                    $query = isset($_POST['query']) ?
-                                        mysqli_real_escape_string($koneksi, $_POST['query']) : ' ';
+                                    $query = isset($_POST['query']) ? mysqli_real_escape_string($koneksi, $_POST['query']) : '';
 
                                     // Query dasar
-                                    $sql_query = "SELECT id_kategori, nm_kategori
-                    FROM tb_kategori";
+                                    $sql_query = "SELECT id_kategori, nm_kategori FROM tb_kategori";
 
-                                    //Jika ada pencarian, tambahkan kondisi WHERE
+                                    // Jika ada pencarian, tambahkan kondisi WHERE
                                     if (!empty($query)) {
-                                        $sql_query .= " WHERE nm_kategori LIKE
-                        '%$query%'";
+                                        $sql_query .= " WHERE nm_kategori LIKE '%$query%'";
                                     }
 
                                     $sql = mysqli_query($koneksi, $sql_query);
@@ -278,10 +216,10 @@
                                     ?>
                                             <tr>
                                                 <td><?php echo $no++; ?></td>
-                                                <td><?php echo $hasil["nm_kategori"]; ?></td>
+                                                <td><?php echo $hasil['nm_kategori']; ?></td>
                                                 <td>
                                                     <a href="e_kategori.php?id=<?php echo $hasil['id_kategori']; ?>" class="btn btn-warning">
-                                                        <i class="bi bi-pencil-squere"></i>
+                                                        <i class="bi bi-pencil-square"></i>
                                                     </a>
                                                     <a href="h_kategori.php?id=<?php echo $hasil['id_kategori']; ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">
                                                         <i class="bi bi-trash"></i>
@@ -293,13 +231,11 @@
                                     } else {
                                         ?>
                                         <tr>
-                                            <td colspan="3"
-                                                class="text-center">Belum Ada Data</td>
+                                            <td colspan="3" class="text-center">Belum Ada Data</td>
                                         </tr>
                                     <?php
                                     }
                                     ?>
-
                                 </tbody>
                             </table>
                             <!-- End Table with stripped rows -->
