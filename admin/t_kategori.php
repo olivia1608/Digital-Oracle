@@ -29,7 +29,7 @@ if (isset($_POST["simpan"])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>t_kategori - DigitalOracle Admin</title>
+  <title>Kategori - DigitalOracle Admin</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
