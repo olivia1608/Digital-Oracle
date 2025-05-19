@@ -463,23 +463,23 @@
                         </div>
                         <div class="col-lg-6 col-md-12 order-2 order-lg-1">
                             <div class="contact-form-content pt-sm-55 pt-xs-55">
-                                <h3 class="contact-page-title">Tell Us Your Message</h3>
+                                <h3 class="contact-page-title">Kirimkan Pesan Anda</h3>
                                 <div class="contact-form">
                                     <form  id="contact-form" action="http://demo.hasthemes.com/limupa-v3/limupa/mail.php" method="post">
                                         <div class="form-group">
-                                            <label>Your Name <span class="required">*</span></label>
+                                            <label>Nama Anda <span class="required">*</span></label>
                                             <input type="text" name="customerName" id="customername" required>
                                         </div>
                                         <div class="form-group">
-                                            <label>Your Email <span class="required">*</span></label>
+                                            <label>Email Anda <span class="required">*</span></label>
                                             <input type="email" name="customerEmail" id="customerEmail" required>
                                         </div>
                                         <div class="form-group">
-                                            <label>Subject</label>
+                                            <label>Subjek</label>
                                             <input type="text" name="contactSubject" id="contactSubject">
                                         </div>
                                         <div class="form-group mb-30">
-                                            <label>Your Message</label>
+                                            <label>Pesan Anda</label>
                                             <textarea name="contactMessage" id="contactMessage" ></textarea>
                                         </div>
                                         <div class="form-group">
