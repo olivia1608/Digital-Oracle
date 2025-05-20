@@ -246,7 +246,7 @@ session_start();
                         <!-- Li's Banner Area End Here -->
                         <!-- shop-top-bar start -->
                         <div class="shop-top-bar mt-30">
-                            < class="shop-bar-inner">
+                            <class="shop-bar-inner">
                                 <div class="product-view-mode">
                                     <!-- shop-item-filter-list start -->
                                     <ul class="nav shop-item-filter-list" role="tablist">
@@ -268,7 +268,7 @@ session_start();
                                 WHERE 1=1
                             ";
                                 $countQuery = mysqli_query($koneksi, $countSql);
-                                $totalData = mysqli_fecth_assoc($countQuery)['total'];
+                                $totalData = mysqli_fetch_assoc($countQuery)['total'];
                                 $end = min($offset + $limit, $totalData);
                                 ?>
                                 <span class="mt-1">Menampilkan <?= $start ?> hingga <?= $end ?> dari <?= $totalData ?> produk</span>
@@ -352,7 +352,7 @@ session_start();
                                         $query = mysqli_query($koneksi, $sql);
                                         while ($data = mysqli_fetch_assoc($query)) {
                                         ?>
-                                            }
+
                                             <div class="col-lg-4 col-md-4 col-sm-6 mt-40">
                                                 <!-- single-product-wrap start -->
                                                 <div class="single-product-wrap">
@@ -480,9 +480,12 @@ session_start();
                                     $checked = (isset($_GET['kategori']) && $_GET['kategori'] == $kategori['id_kategori']) ? 'checked' : '';
                                     echo '<li>
         <label>
-            <input type="radio" name="kategori" value="' . $kategori['id_kategori'] . '" ' . $chacked . ' onchange="this.from.submit()">
-            ' . $kategori[]</label>
+            <input type="radio" name="kategori" value="' . $kategori['id_kategori'] . '" ' . $checked . ' onchange="this.from.submit()">
+            ' . $kategori['nm_kategori'] . '
+        </label>
+    </li>';
                                 }
+                                ?>
                             </ul>
                         </form>
                     </div>
@@ -528,8 +531,8 @@ session_start();
                                     <img src="images/shipping-icon/1.png" alt="Shipping Icon">
                                 </div>
                                 <div class="shipping-text">
-                                    <h2>Free Delivery</h2>
-                                    <p>And free returns. See checkout for delivery dates.</p>
+                                    <h2>Pengiriman Gratis</h2>
+                                    <p>Dan pengembalian gratis. Lihat dihalaman checkout untuk tanggal pengiriman.</p>
                                 </div>
                             </div>
                         </div>
@@ -541,8 +544,8 @@ session_start();
                                     <img src="images/shipping-icon/2.png" alt="Shipping Icon">
                                 </div>
                                 <div class="shipping-text">
-                                    <h2>Safe Payment</h2>
-                                    <p>Pay with the world's most popular and secure payment methods.</p>
+                                    <h2>Pembayaran Aman</h2>
+                                    <p>Bayar dengan metode pembayaran paling populer dan aman di dunia.</p>
                                 </div>
                             </div>
                         </div>
@@ -554,8 +557,8 @@ session_start();
                                     <img src="images/shipping-icon/3.png" alt="Shipping Icon">
                                 </div>
                                 <div class="shipping-text">
-                                    <h2>Shop with Confidence</h2>
-                                    <p>Our Buyer Protection covers your purchasefrom click to delivery.</p>
+                                    <h2>Belanja dengan Percaya Diri</h2>
+                                    <p>Perlindungan Pembeli kami melindungi pembelian Anda dari klik hingga pengiriman.</p>
                                 </div>
                             </div>
                         </div>
@@ -567,8 +570,8 @@ session_start();
                                     <img src="images/shipping-icon/4.png" alt="Shipping Icon">
                                 </div>
                                 <div class="shipping-text">
-                                    <h2>24/7 Help Center</h2>
-                                    <p>Have a question? Call a Specialist or chat online.</p>
+                                    <h2>Pusat Bantuan 24/7</h2>
+                                    <p>Punya pertanyaan? Hubungi Spesialis kami atau chat secara online.</p>
                                 </div>
                             </div>
                         </div>
@@ -589,69 +592,33 @@ session_start();
                             <div class="footer-logo">
                                 <img src="images/menu/logo/1.jpg" alt="Footer Logo">
                                 <p class="info">
-                                    We are a team of designers and developers that create high quality HTML Template & Woocommerce, Shopify Theme.
+                                    Digital Oracle disini hadir untuk memenuhi berbagai keperluan teknologi yang Anda butuhkan. Yang menyediakan berbagai macam alat elektronik terbaru, mulai dari gadget, laptop, dan lain sebagainya.
                                 </p>
                             </div>
                             <ul class="des">
                                 <li>
-                                    <span>Address: </span>
-                                    6688Princess Road, London, Greater London BAS 23JK, UK
+                                    <span>Alamat: </span>
+                                    Jl. Anggrek NO. 15 Kec.Kradenan Kab. Blora Jawa Tengah 58383
                                 </li>
                                 <li>
-                                    <span>Phone: </span>
-                                    <a href="#">(+123) 123 321 345</a>
+                                    <span>TELEPON: </span>
+                                    <a href="#">(+62)831 3541 2239</a>
                                 </li>
                                 <li>
-                                    <span>Email: </span>
-                                    <a href="mailto://info@yourdomain.com">info@yourdomain.com</a>
+                                    <span>EMAIL: </span>
+                                    <a href="mailto://info@digitaloracle.com">info@digitaloracle.com</a>
                                 </li>
                             </ul>
                         </div>
                         <!-- Footer Logo Area End Here -->
                         <!-- Begin Footer Block Area -->
-                        <div class="col-lg-2 col-md-3 col-sm-6">
-                            <div class="footer-block">
-                                <h3 class="footer-block-title">Product</h3>
-                                <ul>
-                                    <li><a href="#">Prices drop</a></li>
-                                    <li><a href="#">New products</a></li>
-                                    <li><a href="#">Best sales</a></li>
-                                    <li><a href="#">Contact us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Footer Block Area End Here -->
-                        <!-- Begin Footer Block Area -->
-                        <div class="col-lg-2 col-md-3 col-sm-6">
-                            <div class="footer-block">
-                                <h3 class="footer-block-title">Our company</h3>
-                                <ul>
-                                    <li><a href="#">Delivery</a></li>
-                                    <li><a href="#">Legal Notice</a></li>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Contact us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Footer Block Area End Here -->
-                        <!-- Begin Footer Block Area -->
                         <div class="col-lg-4">
                             <div class="footer-block">
-                                <h3 class="footer-block-title">Follow Us</h3>
+                                <h3 class="footer-block-title">Ikuti Kami</h3>
                                 <ul class="social-link">
                                     <li class="twitter">
                                         <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
                                             <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="rss">
-                                        <a href="https://rss.com/" data-toggle="tooltip" target="_blank" title="RSS">
-                                            <i class="fa fa-rss"></i>
-                                        </a>
-                                    </li>
-                                    <li class="google-plus">
-                                        <a href="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google +">
-                                            <i class="fa fa-google-plus"></i>
                                         </a>
                                     </li>
                                     <li class="facebook">
@@ -673,12 +640,9 @@ session_start();
                             </div>
                             <!-- Begin Footer Newsletter Area -->
                             <div class="footer-newsletter">
-                                <h4>Sign up to newsletter</h4>
                                 <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="footer-subscribe-form validate" target="_blank" novalidate>
                                     <div id="mc_embed_signup_scroll">
                                         <div id="mc-form" class="mc-form subscribe-form form-group">
-                                            <input id="mc-email" type="email" autocomplete="off" placeholder="Enter your email" />
-                                            <button class="btn" id="mc-submit">Subscribe</button>
                                         </div>
                                     </div>
                                 </form>
@@ -787,28 +751,16 @@ session_start();
                         <div class="col-lg-7 col-md-6 col-sm-6">
                             <div class="product-details-view-content pt-60">
                                 <div class="product-info">
-                                    <h2>Today is a good day Framed poster</h2>
-                                    <span class="product-details-ref">Reference: demo_15</span>
-                                    <div class="rating-box pt-20">
-                                        <ul class="rating rating-with-review-item">
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                            <li class="review-item"><a href="#">Read Review</a></li>
-                                            <li class="review-item"><a href="#">Write Review</a></li>
-                                        </ul>
-                                    </div>
+                                    <h2 id="modal-nama-produk"></h2>
+                                    <span class="product-details-ref" id="modal-kategori">Kategori</span>
                                     <div class="price-box pt-20">
-                                        <span class="new-price new-price-2">$57.98</span>
+                                        <span class="new-price new-pricw-2" id="modal-harga">Rp0</span>
                                     </div>
                                     <div class="product-desc">
-                                        <p>
-                                            <span>100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
-                                            </span>
-                                        </p>
+                                        <p id="modal-desc"></p>
+                                        <p><strong>Stok tersedia:</strong> <span id="modal-stok">0</span> unit</p> <!-- Tambahan -->
                                     </div>
+
                                     <div class="product-variants">
                                         <div class="produt-variants-size">
                                             <label>Dimension</label>
@@ -819,28 +771,80 @@ session_start();
                                             </select>
                                         </div>
                                     </div>
+
                                     <div class="single-add-to-cart">
-                                        <form action="#" class="cart-quantity">
+                                        <form action="tambah_ke_keranjang.php" method="POST" class="cart-quantity">
+                                            <input type="hidden" name="id_produk" id="input-id-produk">
+                                            <input type="hidden" name="id_user" value="<?= $_SESSION['id_user'] ?>">
+                                            <input type="hidden" name="harga" id="input-harga">
+                                            <input type="hidden" name="redirect_url" value="belanja.php">
+
                                             <div class="quantity">
-                                                <label>Quantity</label>
+                                                <label>Jumlah</label>
                                                 <div class="cart-plus-minus">
-                                                    <input class="cart-plus-minus-box" value="1" type="text">
+                                                    <input class="cart-plus-minus-box" name="jumlah" id="input-jumlah" value="1" type="text">
                                                     <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
                                                     <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                                 </div>
                                             </div>
-                                            <button class="add-to-cart" type="submit">Add to cart</button>
+
+                                            <button class="add-to-cart" type="submit">Beli Sekarang</button>
                                         </form>
-                                    </div>
-                                    <div class="product-additional-info pt-25">
-                                        <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
-                                        <div class="product-social-sharing pt-25">
-                                            <ul>
-                                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                                                <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
-                                                <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                                        <h2>Today is a good day Framed poster</h2>
+                                        <span class="product-details-ref">Reference: demo_15</span>
+                                        <div class="rating-box pt-20">
+                                            <ul class="rating rating-with-review-item">
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li><i class="fa fa-star-o"></i></li>
+                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
+                                                <li class="review-item"><a href="#">Read Review</a></li>
+                                                <li class="review-item"><a href="#">Write Review</a></li>
                                             </ul>
+                                        </div>
+                                        <div class="price-box pt-20">
+                                            <span class="new-price new-price-2">$57.98</span>
+                                        </div>
+                                        <div class="product-desc">
+                                            <p>
+                                                <span>100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="product-variants">
+                                            <div class="produt-variants-size">
+                                                <label>Dimension</label>
+                                                <select class="nice-select">
+                                                    <option value="1" title="S" selected="selected">40x60cm</option>
+                                                    <option value="2" title="M">60x90cm</option>
+                                                    <option value="3" title="L">80x120cm</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="single-add-to-cart">
+                                            <form action="#" class="cart-quantity">
+                                                <div class="quantity">
+                                                    <label>Quantity</label>
+                                                    <div class="cart-plus-minus">
+                                                        <input class="cart-plus-minus-box" value="1" type="text">
+                                                        <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
+                                                        <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
+                                                    </div>
+                                                </div>
+                                                <button class="add-to-cart" type="submit">Add to cart</button>
+                                            </form>
+                                        </div>
+                                        <div class="product-additional-info pt-25">
+                                            <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
+                                            <div class="product-social-sharing pt-25">
+                                                <ul>
+                                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+                                                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
+                                                    <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -850,11 +854,47 @@ session_start();
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Quick View | Modal Area End Here -->
+        <!-- Quick View | Modal Area End Here -->
     </div>
     <!-- Body Wrapper End Here -->
     <!-- jQuery-V1.12.4 -->
+    <script>
+        $(document).ready(function() {
+            $('.quick-view').click(function) {
+                var id = $(this).data('id');
+
+                $.ajax({
+                    url: 'get-produk.php',
+                    type: 'GET',
+                    data: {
+                        id: id
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#modal-nama-produk').text(data.nm_produk);
+                        $('#modal-kategori').text(data.nm_kategori);
+                        $('#modal-harga').text('Rp' + parseInt(data.harga).toLocaleString('id-ID'));
+                        $('#modal-desk').text(data.desk);
+                        $('#modal-gambar').attr('src', 'admin/produk_img/' + data.gambar);
+                        $('#modal-stok').text(data.stok);
+
+                        // Set hidden form fields
+                        $('#input-id-produk').val(data.id_produk);
+                        $('#input-harga').val(data.harga);
+
+                        // Reset jumlah
+                        $('#input-jumlah').val(1);
+
+                        // Tampilkan modal
+                        $('#exampleModalCenter').modal('show');
+                    },
+                    error: function() {
+                        alert('Gagal mengambil data produk.');
+                    }
+                });
+            };
+        });
+    </script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <!-- Popper js -->
     <script src="js/vendor/popper.min.js"></script>
