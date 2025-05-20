@@ -4,81 +4,82 @@ session_start();
 require "admin/koneksi.php";
 
 if (isset($_POST["login"])) {
-  $username = $_POST["username"];
-  $password = $_POST["password"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-  $result = mysqli_query($koneksi, "SELECT * FROM tb_user WHERE username='$username'");
+    $result = mysqli_query($koneksi, "SELECT * FROM tb_user WHERE username='$username'");
 
-  // cek username
-  if (mysqli_num_rows($result) === 1) {
-    // Cek password
-    $row = mysqli_fetch_assoc($result);
-    if (password_verify($password, $row["password"])) {
-      // Set session
-      $_SESSION["login"] = true;
-      $_SESSION["username"] = $row["username"];
-      $_SESSION["status"] = $row["status"];
-      header("refresh:0, index.php");
+    // cek username
+    if (mysqli_num_rows($result) === 1) {
+        // Cek password
+        $row = mysqli_fetch_assoc($result);
+        if (password_verify($password, $row["password"])) {
+            // Set session
+            $_SESSION["login"] = true;
+            $_SESSION["username"] = $row["username"];
+            $_SESSION["status"] = $row["status"];
+            header("refresh:0, index.php");
+        } else {
+            echo "<script>alert('Username atau password yang anda masukkan salah')</script>";
+        }
     } else {
-      echo "<script>alert('Username atau password yang anda masukkan salah')</script>";
+        echo "<script>alert('Username atau password yang anda masukkan salah')</script>";
     }
-  } else {
-    echo "<script>alert('Username atau password yang anda masukkan salah')</script>";
-  }
 }
 ?>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
-    
+
 <!-- login-register31:27-->
 
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Login - DigitalOracle</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-        <!-- Material Design Iconic Font-V2.2.0 -->
-        <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <!-- Font Awesome Stars-->
-        <link rel="stylesheet" href="css/fontawesome-stars.css">
-        <!-- Meanmenu CSS -->
-        <link rel="stylesheet" href="css/meanmenu.css">
-        <!-- owl carousel CSS -->
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <!-- Slick Carousel CSS -->
-        <link rel="stylesheet" href="css/slick.css">
-        <!-- Animate CSS -->
-        <link rel="stylesheet" href="css/animate.css">
-        <!-- Jquery-ui CSS -->
-        <link rel="stylesheet" href="css/jquery-ui.min.css">
-        <!-- Venobox CSS -->
-        <link rel="stylesheet" href="css/venobox.css">
-        <!-- Nice Select CSS -->
-        <link rel="stylesheet" href="css/nice-select.css">
-        <!-- Magnific Popup CSS -->
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <!-- Bootstrap V4.1.3 Fremwork CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Helper CSS -->
-        <link rel="stylesheet" href="css/helper.css">
-        <!-- Main Style CSS -->
-        <link rel="stylesheet" href="style.css">
-        <!-- Responsive CSS -->
-        <link rel="stylesheet" href="css/responsive.css">
-        <!-- Modernizr js -->
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-        <body>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login - DigitalOracle</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- Material Design Iconic Font-V2.2.0 -->
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Font Awesome Stars-->
+    <link rel="stylesheet" href="css/fontawesome-stars.css">
+    <!-- Meanmenu CSS -->
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Jquery-ui CSS -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <!-- Venobox CSS -->
+    <link rel="stylesheet" href="css/venobox.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="css/nice-select.css">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Bootstrap V4.1.3 Fremwork CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Helper CSS -->
+    <link rel="stylesheet" href="css/helper.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Modernizr js -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
     <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
-        <<!-- Begin Body Wrapper -->
+    <<!-- Begin Body Wrapper -->
         <div class="body-wrapper">
             <!-- Begin Header Area -->
             <header>
@@ -161,75 +162,75 @@ if (isset($_POST["login"])) {
                                 <!-- Begin Header Middle Searchbox Area -->
                                 <form action="#" class="hm-searchbox">
                                     <select class="nice-select select-search-category">
-                                        <option value="0">All</option>                         
-                                        <option value="10">Laptops</option>                     
-                                        <option value="17">- -  Prime Video</option>                    
-                                        <option value="20">- - - -  All Videos</option>                     
-                                        <option value="21">- - - -  Blouses</option>                        
-                                        <option value="22">- - - -  Evening Dresses</option>                
-                                        <option value="23">- - - -  Summer Dresses</option>                     
-                                        <option value="24">- - - -  T-shirts</option>                       
-                                        <option value="25">- - - -  Rent or Buy</option>                        
-                                        <option value="26">- - - -  Your Watchlist</option>                     
-                                        <option value="27">- - - -  Watch Anywhere</option>                     
-                                        <option value="28">- - - -  Getting Started</option>         
-                                        <option value="18">- - - -  Computers</option>                      
-                                        <option value="29">- - - -  More to Explore</option>         
-                                        <option value="30">- - - -  TV &amp; Video</option>                     
-                                        <option value="31">- - - -  Audio &amp; Theater</option>               
-                                        <option value="32">- - - -  Camera, Photo </option>
-                                        <option value="33">- - - -  Cell Phones</option>                        
-                                        <option value="34">- - - -  Headphones</option>                     
-                                        <option value="35">- - - -  Video Games</option>                        
-                                        <option value="36">- - - -  Wireless Speakers</option>            
-                                        <option value="19">- - - -  Electronics</option>                        
-                                        <option value="37">- - - -  Amazon Home</option>                        
-                                        <option value="38">- - - -  Kitchen &amp; Dining</option>           
-                                        <option value="39">- - - -  Furniture</option>                      
-                                        <option value="40">- - - -  Bed &amp; Bath</option>                     
-                                        <option value="41">- - - -  Appliances</option>                 
-                                        <option value="11">TV &amp; Audio</option>                  
-                                        <option value="42">- -  SamSung</option>                        
-                                        <option value="45">- - - -  Office</option>                     
-                                        <option value="47">- - - -  Gaming</option>                 
-                                        <option value="48">- - - -  Chromebook</option>                     
-                                        <option value="49">- - - -  Refurbished</option>                    
-                                        <option value="50">- - - -  Touchscreen</option>                        
-                                        <option value="51">- - - -  Ultrabooks</option>                     
-                                        <option value="52">- - - -  Blouses</option>                        
-                                        <option value="43">- -  Toshiba</option>                        
-                                        <option value="53">- - - -  Hard Drives</option>                        
-                                        <option value="54">- - - -  Graphic Cards</option>                      
-                                        <option value="55">- - - -  Processors (CPU)</option>  
-                                        <option value="56">- - - -  Memory</option>                     
-                                        <option value="57">- - - -  Motherboards</option>                       
-                                        <option value="58">- - - -  Fans &amp; Cooling</option> 
-                                        <option value="59">- - - -  CD/DVD Drives</option>                      
-                                        <option value="44">- -  Sony Bravia</option>                        
-                                        <option value="60">- - - -  Sound Cards</option>                        
-                                        <option value="61">- - - -  Cases &amp; Towers</option>   
-                                        <option value="62">- - - -  Casual Dresses</option>                     
-                                        <option value="63">- - - -  Evening Dresses</option>       
-                                        <option value="64">- - - -  T-shirts</option>                       
-                                        <option value="65">- - - -  Tops</option>                                 
-                                        <option value="12">Smartphone</option>                  
-                                        <option value="66">- -  Camera Accessories</option>                     
-                                        <option value="68">- - - -  Octa Core</option>                      
-                                        <option value="69">- - - -  Quad Core</option>                  
-                                        <option value="70">- - - -  Dual Core</option>                      
-                                        <option value="71">- - - -  7.0 Screen</option>                     
-                                        <option value="72">- - - -  9.0 Screen</option>                     
-                                        <option value="73">- - - -  Bags &amp; Cases</option>                   
-                                        <option value="67">- -  Camcorders</option>                     
-                                        <option value="74">- - - -  Batteries</option>                      
-                                        <option value="75">- - - -  Microphones</option>                        
-                                        <option value="76">- - - -  Stabilizers</option>                        
-                                        <option value="77">- - - -  Video Tapes</option>                        
-                                        <option value="78">- - - -  Memory Card Readers</option> 
-                                        <option value="79">- - - -  Tripods</option>           
-                                        <option value="13">Cameras</option>                          
-                                        <option value="14">headphone</option>                                
-                                        <option value="15">Smartwatch</option>                           
+                                        <option value="0">All</option>
+                                        <option value="10">Laptops</option>
+                                        <option value="17">- - Prime Video</option>
+                                        <option value="20">- - - - All Videos</option>
+                                        <option value="21">- - - - Blouses</option>
+                                        <option value="22">- - - - Evening Dresses</option>
+                                        <option value="23">- - - - Summer Dresses</option>
+                                        <option value="24">- - - - T-shirts</option>
+                                        <option value="25">- - - - Rent or Buy</option>
+                                        <option value="26">- - - - Your Watchlist</option>
+                                        <option value="27">- - - - Watch Anywhere</option>
+                                        <option value="28">- - - - Getting Started</option>
+                                        <option value="18">- - - - Computers</option>
+                                        <option value="29">- - - - More to Explore</option>
+                                        <option value="30">- - - - TV &amp; Video</option>
+                                        <option value="31">- - - - Audio &amp; Theater</option>
+                                        <option value="32">- - - - Camera, Photo </option>
+                                        <option value="33">- - - - Cell Phones</option>
+                                        <option value="34">- - - - Headphones</option>
+                                        <option value="35">- - - - Video Games</option>
+                                        <option value="36">- - - - Wireless Speakers</option>
+                                        <option value="19">- - - - Electronics</option>
+                                        <option value="37">- - - - Amazon Home</option>
+                                        <option value="38">- - - - Kitchen &amp; Dining</option>
+                                        <option value="39">- - - - Furniture</option>
+                                        <option value="40">- - - - Bed &amp; Bath</option>
+                                        <option value="41">- - - - Appliances</option>
+                                        <option value="11">TV &amp; Audio</option>
+                                        <option value="42">- - SamSung</option>
+                                        <option value="45">- - - - Office</option>
+                                        <option value="47">- - - - Gaming</option>
+                                        <option value="48">- - - - Chromebook</option>
+                                        <option value="49">- - - - Refurbished</option>
+                                        <option value="50">- - - - Touchscreen</option>
+                                        <option value="51">- - - - Ultrabooks</option>
+                                        <option value="52">- - - - Blouses</option>
+                                        <option value="43">- - Toshiba</option>
+                                        <option value="53">- - - - Hard Drives</option>
+                                        <option value="54">- - - - Graphic Cards</option>
+                                        <option value="55">- - - - Processors (CPU)</option>
+                                        <option value="56">- - - - Memory</option>
+                                        <option value="57">- - - - Motherboards</option>
+                                        <option value="58">- - - - Fans &amp; Cooling</option>
+                                        <option value="59">- - - - CD/DVD Drives</option>
+                                        <option value="44">- - Sony Bravia</option>
+                                        <option value="60">- - - - Sound Cards</option>
+                                        <option value="61">- - - - Cases &amp; Towers</option>
+                                        <option value="62">- - - - Casual Dresses</option>
+                                        <option value="63">- - - - Evening Dresses</option>
+                                        <option value="64">- - - - T-shirts</option>
+                                        <option value="65">- - - - Tops</option>
+                                        <option value="12">Smartphone</option>
+                                        <option value="66">- - Camera Accessories</option>
+                                        <option value="68">- - - - Octa Core</option>
+                                        <option value="69">- - - - Quad Core</option>
+                                        <option value="70">- - - - Dual Core</option>
+                                        <option value="71">- - - - 7.0 Screen</option>
+                                        <option value="72">- - - - 9.0 Screen</option>
+                                        <option value="73">- - - - Bags &amp; Cases</option>
+                                        <option value="67">- - Camcorders</option>
+                                        <option value="74">- - - - Batteries</option>
+                                        <option value="75">- - - - Microphones</option>
+                                        <option value="76">- - - - Stabilizers</option>
+                                        <option value="77">- - - - Video Tapes</option>
+                                        <option value="78">- - - - Memory Card Readers</option>
+                                        <option value="79">- - - - Tripods</option>
+                                        <option value="13">Cameras</option>
+                                        <option value="14">headphone</option>
+                                        <option value="15">Smartwatch</option>
                                         <option value="16">Accessories</option>
                                     </select>
                                     <input type="text" placeholder="Enter your search key ...">
@@ -326,7 +327,7 @@ if (isset($_POST["login"])) {
                 <!-- Header Bottom Area End Here -->
                 <!-- Begin Mobile Menu Area -->
                 <div class="mobile-menu-area d-lg-none d-xl-none col-12">
-                    <div class="container"> 
+                    <div class="container">
                         <div class="row">
                             <div class="mobile-menu">
                             </div>
@@ -354,7 +355,7 @@ if (isset($_POST["login"])) {
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
                             <!-- Login Form s-->
-                            <form action="post" >
+                            <form action="post">
                                 <div class="login-form">
                                     <h4 class="login-title">Login</h4>
                                     <div class="row">
@@ -373,37 +374,15 @@ if (isset($_POST["login"])) {
                                 </div>
                             </form>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
-                            <form action="#">
-                                <div class="login-form">
-                                    <h4 class="login-title">Register</h4>
-                                    <div class="row">
-                                        <div class="col-md-6 col-12 mb-20">
-                                            <label>First Name</label>
-                                            <input class="mb-0" type="text" placeholder="First Name">
-                                        </div>
-                                        <div class="col-md-6 col-12 mb-20">
-                                            <label>Last Name</label>
-                                            <input class="mb-0" type="text" placeholder="Last Name">
-                                        </div>
-                                        <div class="col-md-12 mb-20">
-                                            <label>Email Address*</label>
-                                            <input class="mb-0" type="email" placeholder="Email Address">
-                                        </div>
-                                        <div class="col-md-6 mb-20">
-                                            <label>Password</label>
-                                            <input class="mb-0" type="password" placeholder="Password">
-                                        </div>
-                                        <div class="col-md-6 mb-20">
-                                            <label>Confirm Password</label>
-                                            <input class="mb-0" type="password" placeholder="Confirm Password">
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="register-button mt-0">Register</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                        <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
+                            <!-- Banner Image -->
+                            <div class="banner-wrapper text-center">
+                                <img src="images/bg-banner/4.png" alt="Banner Toko Elektronik" class="img-fluid" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%;">
+                                <p class="mt-3" style="font-size: 16px; color: #555;">
+                                    Temukan smartphone, tablet, laptop, dan produk elektronik terbaik hanya di Technozone!<br>
+                                    <a href="register.php" style="color: #007bff; text-decoration: underline;">Belum punya akun? Register di sini.</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -571,7 +550,7 @@ if (isset($_POST["login"])) {
             </div>
             <!-- Footer Area End Here -->
         </div>
-        
+
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
@@ -615,7 +594,8 @@ if (isset($_POST["login"])) {
         <script src="js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->
         <script src="js/main.js"></script>
-    </body>
+</body>
 
 <!-- login-register31:27-->
+
 </html>

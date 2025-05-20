@@ -282,125 +282,9 @@
                                 <div class="hb-menu">
                                     <nav>
                                         <ul>
-                                            <li class="dropdown-holder"><a href="index.html">Home</a>
-                                                <ul class="hb-dropdown">
-                                                    <li><a href="index.html">Home One</a></li>
-                                                    <li><a href="index-2.html">Home Two</a></li>
-                                                    <li><a href="index-3.html">Home Three</a></li>
-                                                    <li><a href="index-4.html">Home Four</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="catmenu-dropdown megamenu-holder"><a href="shop-left-sidebar.html">Shop</a>
-                                                <ul class="megamenu hb-megamenu">
-                                                    <li><a href="shop-left-sidebar.html">Shop Page Layout</a>
-                                                        <ul>
-                                                            <li><a href="shop-3-column.html">Shop 3 Column</a></li>
-                                                            <li><a href="shop-4-column.html">Shop 4 Column</a></li>
-                                                            <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                                                            <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                                            <li><a href="shop-list.html">Shop List</a></li>
-                                                            <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
-                                                            <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="single-product-gallery-left.html">Single Product Style</a>
-                                                        <ul>
-                                                            <li><a href="single-product-carousel.html">Single Product Carousel</a></li>
-                                                            <li><a href="single-product-gallery-left.html">Single Product Gallery Left</a></li>
-                                                            <li><a href="single-product-gallery-right.html">Single Product Gallery Right</a></li>
-                                                            <li><a href="single-product-tab-style-top.html">Single Product Tab Style Top</a></li>
-                                                            <li><a href="single-product-tab-style-left.html">Single Product Tab Style Left</a></li>
-                                                            <li><a href="single-product-tab-style-right.html">Single Product Tab Style Right</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="single-product.html">Single Products</a>
-                                                        <ul>
-                                                            <li><a href="single-product.html">Single Product</a></li>
-                                                            <li><a href="single-product-sale.html">Single Product Sale</a></li>
-                                                            <li><a href="single-product-group.html">Single Product Group</a></li>
-                                                            <li><a href="single-product-normal.html">Single Product Normal</a></li>
-                                                            <li><a href="single-product-affiliate.html">Single Product Affiliate</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown-holder"><a href="blog-left-sidebar.html">Blog</a>
-                                                <ul class="hb-dropdown">
-                                                    <li class="sub-dropdown-holder"><a href="blog-left-sidebar.html">Blog Grid View</a>
-                                                        <ul class="hb-dropdown hb-sub-dropdown">
-                                                            <li><a href="blog-2-column.html">Blog 2 Column</a></li>
-                                                            <li><a href="blog-3-column.html">Blog 3 Column</a></li>
-                                                            <li><a href="blog-left-sidebar.html">Grid Left Sidebar</a></li>
-                                                            <li><a href="blog-right-sidebar.html">Grid Right Sidebar</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="sub-dropdown-holder"><a href="blog-list-left-sidebar.html">Blog List View</a>
-                                                        <ul class="hb-dropdown hb-sub-dropdown">
-                                                            <li><a href="blog-list.html">Blog List</a></li>
-                                                            <li><a href="blog-list-left-sidebar.html">List Left Sidebar</a></li>
-                                                            <li><a href="blog-list-right-sidebar.html">List Right Sidebar</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="sub-dropdown-holder"><a href="blog-details-left-sidebar.html">Blog Details</a>
-                                                        <ul class="hb-dropdown hb-sub-dropdown">
-                                                            <li><a href="blog-details-left-sidebar.html">Left Sidebar</a></li>
-                                                            <li><a href="blog-details-right-sidebar.html">Right Sidebar</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="sub-dropdown-holder"><a href="blog-gallery-format.html">Blog Format</a>
-                                                        <ul class="hb-dropdown hb-sub-dropdown">
-                                                            <li><a href="blog-audio-format.html">Blog Audio Format</a></li>
-                                                            <li><a href="blog-video-format.html">Blog Video Format</a></li>
-                                                            <li><a href="blog-gallery-format.html">Blog Gallery Format</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="catmenu-dropdown megamenu-static-holder"><a href="index.html">Pages</a>
-                                                <ul class="megamenu hb-megamenu">
-                                                    <li><a href="blog-left-sidebar.html">Blog Layouts</a>
-                                                        <ul>
-                                                            <li><a href="blog-2-column.html">Blog 2 Column</a></li>
-                                                            <li><a href="blog-3-column.html">Blog 3 Column</a></li>
-                                                            <li><a href="blog-left-sidebar.html">Grid Left Sidebar</a></li>
-                                                            <li><a href="blog-right-sidebar.html">Grid Right Sidebar</a></li>
-                                                            <li><a href="blog-list.html">Blog List</a></li>
-                                                            <li><a href="blog-list-left-sidebar.html">List Left Sidebar</a></li>
-                                                            <li><a href="blog-list-right-sidebar.html">List Right Sidebar</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="blog-details-left-sidebar.html">Blog Details Pages</a>
-                                                        <ul>
-                                                            <li><a href="blog-details-left-sidebar.html">Left Sidebar</a></li>
-                                                            <li><a href="blog-details-right-sidebar.html">Right Sidebar</a></li>
-                                                            <li><a href="blog-audio-format.html">Blog Audio Format</a></li>
-                                                            <li><a href="blog-video-format.html">Blog Video Format</a></li>
-                                                            <li><a href="blog-gallery-format.html">Blog Gallery Format</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="index.html">Other Pages</a>
-                                                        <ul>
-                                                            <li><a href="login-register.html">My Account</a></li>
-                                                            <li><a href="checkout.html">Checkout</a></li>
-                                                            <li><a href="compare.html">Compare</a></li>
-                                                            <li><a href="wishlist.html">Wishlist</a></li>
-                                                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="index.html">Other Pages 2</a>
-                                                        <ul>
-                                                            <li class="active"><a href="contact.html">Contact</a></li>
-                                                            <li><a href="about-us.html">About Us</a></li>
-                                                            <li><a href="faq.html">FAQ</a></li>
-                                                            <li><a href="404.html">404 Error</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="shop-left-sidebar.html">Smartwatch</a></li>
-                                            <li><a href="shop-left-sidebar.html">Accessories</a></li>
+                                            <li><a href="index.php">BERANDA</a></li>
+                                            <li><a href="belanja.php">BELANJA</a></li>
+                                            <li><a href="contact.php">HUBUNGI KAMI</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -427,8 +311,8 @@
                 <div class="container">
                     <div class="breadcrumb-content">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active">Contact</li>
+                            <li><a href="index.html">Beranda</a></li>
+                            <li class="active">Hubungi Kami</li>
                         </ul>
                     </div>
                 </div>
@@ -443,21 +327,19 @@
                     <div class="row">
                         <div class="col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2">
                             <div class="contact-page-side-content">
-                                <h3 class="contact-page-title">Contact Us</h3>
-                                <p class="contact-page-message mb-25">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum formas human.</p>
+                                <h3 class="contact-page-title">DigitalOracle</h3>
+                                <p class="contact-page-message mb-25">Digital Oracle adalah toko online yang menyediakan berbagai macam alat elektronik terbaru dengan harga terjangkau, mulai dari gadget, laptop, dan lain sebagainya.</p>
                                 <div class="single-contact-block">
-                                    <h4><i class="fa fa-fax"></i> Address</h4>
-                                    <p>123 Main Street, Anytown, CA 12345 – USA</p>
+                                    <h4><i class="fa fa-fax"></i> Alamat</h4>
+                                    <p>Jl. Anggrek NO. 15 Kec.Kradenan Kab. Blora Jawa Tengah 58383</p>
                                 </div>
                                 <div class="single-contact-block">
-                                    <h4><i class="fa fa-phone"></i> Phone</h4>
-                                    <p>Mobile: (08) 123 456 789</p>
-                                    <p>Hotline: 1009 678 456</p>
+                                    <h4><i class="fa fa-phone"></i> Telepon</h4>
+                                    <p> (+62)831 3541 2239</p>
                                 </div>
                                 <div class="single-contact-block last-child">
                                     <h4><i class="fa fa-envelope-o"></i> Email</h4>
-                                    <p>yourmail@domain.com</p>
-                                    <p>support@hastech.company</p>
+                                    <p>info@digitaloracle.com</p>
                                 </div>
                             </div>
                         </div>
@@ -509,8 +391,8 @@
                                             <img src="images/shipping-icon/1.png" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
-                                            <h2>Free Delivery</h2>
-                                            <p>And free returns. See checkout for delivery dates.</p>
+                                            <h2>Pengiriman Gratis</h2>
+                                            <p>Dan pengembalian gratis. Lihat dihalaman checkout untuk tanggal pengiriman.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -522,8 +404,8 @@
                                             <img src="images/shipping-icon/2.png" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
-                                            <h2>Safe Payment</h2>
-                                            <p>Pay with the world's most popular and secure payment methods.</p>
+                                            <h2>Pembayaran Aman</h2>
+                                            <p>Bayar dengan metode pembayaran paling populer dan aman di dunia.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -535,8 +417,8 @@
                                             <img src="images/shipping-icon/3.png" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
-                                            <h2>Shop with Confidence</h2>
-                                            <p>Our Buyer Protection covers your purchasefrom click to delivery.</p>
+                                            <h2>Belanja dengan Percaya Diri</h2>
+                                            <p>Perlindungan Pembeli kami melindungi pembelian Anda dari klik hingga pengiriman.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -548,8 +430,8 @@
                                             <img src="images/shipping-icon/4.png" alt="Shipping Icon">
                                         </div>
                                         <div class="shipping-text">
-                                            <h2>24/7 Help Center</h2>
-                                            <p>Have a question? Call a Specialist or chat online.</p>
+                                            <h2>Pusat Bantuan 24/7</h2>
+                                            <p>Punya pertanyaan? Hubungi Spesialis kami atau chat secara online.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -591,28 +473,10 @@
                                 <!-- Footer Logo Area End Here -->
                                 <!-- Begin Footer Block Area -->
                                 <div class="col-lg-2 col-md-3 col-sm-6">
-                                    <div class="footer-block">
-                                        <h3 class="footer-block-title">Product</h3>
-                                        <ul>
-                                            <li><a href="#">Prices drop</a></li>
-                                            <li><a href="#">New products</a></li>
-                                            <li><a href="#">Best sales</a></li>
-                                            <li><a href="#">Contact us</a></li>
-                                        </ul>
-                                    </div>
                                 </div>
                                 <!-- Footer Block Area End Here -->
                                 <!-- Begin Footer Block Area -->
                                 <div class="col-lg-2 col-md-3 col-sm-6">
-                                    <div class="footer-block">
-                                        <h3 class="footer-block-title">Our company</h3>
-                                        <ul>
-                                            <li><a href="#">Delivery</a></li>
-                                            <li><a href="#">Legal Notice</a></li>
-                                            <li><a href="#">About us</a></li>
-                                            <li><a href="#">Contact us</a></li>
-                                        </ul>
-                                    </div>
                                 </div>
                                 <!-- Footer Block Area End Here -->
                                 <!-- Begin Footer Block Area -->
@@ -677,31 +541,6 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <!-- Begin Footer Links Area -->
-                                <div class="footer-links">
-                                    <ul>
-                                        <li><a href="#">Online Shopping</a></li>
-                                        <li><a href="#">Promotions</a></li>
-                                        <li><a href="#">My Orders</a></li>
-                                        <li><a href="#">Help</a></li>
-                                        <li><a href="#">Customer Service</a></li>
-                                        <li><a href="#">Support</a></li>
-                                        <li><a href="#">Most Populars</a></li>
-                                        <li><a href="#">New Arrivals</a></li>
-                                        <li><a href="#">Special Products</a></li>
-                                        <li><a href="#">Manufacturers</a></li>
-                                        <li><a href="#">Our Stores</a></li>
-                                        <li><a href="#">Shipping</a></li>
-                                        <li><a href="#">Payments</a></li>
-                                        <li><a href="#">Warantee</a></li>
-                                        <li><a href="#">Refunds</a></li>
-                                        <li><a href="#">Checkout</a></li>
-                                        <li><a href="#">Discount</a></li>
-                                        <li><a href="#">Refunds</a></li>
-                                        <li><a href="#">Policy Shipping</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Footer Links Area End Here -->
                                 <!-- Begin Footer Payment Area -->
                                 <div class="copyright text-center">
                                     <a href="#">
