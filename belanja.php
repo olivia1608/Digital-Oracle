@@ -590,7 +590,7 @@ session_start();
                         <!-- Begin Footer Logo Area -->
                         <div class="col-lg-4 col-md-6">
                             <div class="footer-logo">
-                                <img src="images/menu/logo/1.jpg" alt="Footer Logo">
+                                <h1>DigitalOracle</h1>
                                 <p class="info">
                                     Digital Oracle disini hadir untuk memenuhi berbagai keperluan teknologi yang Anda butuhkan. Yang menyediakan berbagai macam alat elektronik terbaru, mulai dari gadget, laptop, dan lain sebagainya.
                                 </p>
@@ -638,16 +638,6 @@ session_start();
                                     </li>
                                 </ul>
                             </div>
-                            <!-- Begin Footer Newsletter Area -->
-                            <div class="footer-newsletter">
-                                <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="footer-subscribe-form validate" target="_blank" novalidate>
-                                    <div id="mc_embed_signup_scroll">
-                                        <div id="mc-form" class="mc-form subscribe-form form-group">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- Footer Newsletter Area End Here -->
                         </div>
                         <!-- Footer Block Area End Here -->
                     </div>
@@ -660,31 +650,6 @@ session_start();
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <!-- Begin Footer Links Area -->
-                        <div class="footer-links">
-                            <ul>
-                                <li><a href="#">Online Shopping</a></li>
-                                <li><a href="#">Promotions</a></li>
-                                <li><a href="#">My Orders</a></li>
-                                <li><a href="#">Help</a></li>
-                                <li><a href="#">Customer Service</a></li>
-                                <li><a href="#">Support</a></li>
-                                <li><a href="#">Most Populars</a></li>
-                                <li><a href="#">New Arrivals</a></li>
-                                <li><a href="#">Special Products</a></li>
-                                <li><a href="#">Manufacturers</a></li>
-                                <li><a href="#">Our Stores</a></li>
-                                <li><a href="#">Shipping</a></li>
-                                <li><a href="#">Payments</a></li>
-                                <li><a href="#">Warantee</a></li>
-                                <li><a href="#">Refunds</a></li>
-                                <li><a href="#">Checkout</a></li>
-                                <li><a href="#">Discount</a></li>
-                                <li><a href="#">Refunds</a></li>
-                                <li><a href="#">Policy Shipping</a></li>
-                            </ul>
-                        </div>
-                        <!-- Footer Links Area End Here -->
                         <!-- Begin Footer Payment Area -->
                         <div class="copyright text-center">
                             <a href="#">
@@ -694,7 +659,7 @@ session_start();
                         <!-- Footer Payment Area End Here -->
                         <!-- Begin Copyright Area -->
                         <div class="copyright text-center pt-25">
-                            <span><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
+                            <span><a target="_blank" href="https://instagram.com/olivia_chyn/">Designed by: OliviaCahyaniAgustina</a></span>
                         </div>
                         <!-- Copyright Area End Here -->
                     </div>

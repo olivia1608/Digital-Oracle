@@ -142,7 +142,7 @@ $data = mysqli_fetch_array($sql);
                             <div class="col-lg-3">
                                 <div class="logo pb-sm-30 pb-xs-30">
                                     <a href="index.html">
-                                        <img src="images/menu/logo/1.jpg" alt="">
+                                        <h1>DigitalOracle</h1>
                                     </a>
                                 </div>
                             </div>
@@ -455,7 +455,7 @@ $data = mysqli_fetch_array($sql);
                                 <!-- Begin Footer Logo Area -->
                                 <div class="col-lg-4 col-md-6">
                                     <div class="footer-logo">
-                                        <img src="images/menu/logo/1.jpg" alt="Footer Logo">
+                                        <h1>DigitalOracle</h1>
                                         <p class="info">
                                             Digital Oracle disini hadir untuk memenuhi berbagai keperluan teknologi yang Anda butuhkan. Yang menyediakan berbagai macam alat elektronik terbaru, mulai dari gadget, laptop, dan lain sebagainya.
                                         </p>
@@ -487,7 +487,7 @@ $data = mysqli_fetch_array($sql);
                                 <!-- Begin Footer Block Area -->
                                 <div class="col-lg-4">
                                     <div class="footer-block">
-                                        <h3 class="footer-block-title">Follow Us</h3>
+                                        <h3 class="footer-block-title">Ikuti Kami</h3>
                                         <ul class="social-link">
                                             <li class="twitter">
                                                 <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
@@ -523,31 +523,6 @@ $data = mysqli_fetch_array($sql);
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <!-- Begin Footer Links Area -->
-                                <div class="footer-links">
-                                    <ul>
-                                        <li><a href="#">Online Shopping</a></li>
-                                        <li><a href="#">Promotions</a></li>
-                                        <li><a href="#">My Orders</a></li>
-                                        <li><a href="#">Help</a></li>
-                                        <li><a href="#">Customer Service</a></li>
-                                        <li><a href="#">Support</a></li>
-                                        <li><a href="#">Most Populars</a></li>
-                                        <li><a href="#">New Arrivals</a></li>
-                                        <li><a href="#">Special Products</a></li>
-                                        <li><a href="#">Manufacturers</a></li>
-                                        <li><a href="#">Our Stores</a></li>
-                                        <li><a href="#">Shipping</a></li>
-                                        <li><a href="#">Payments</a></li>
-                                        <li><a href="#">Warantee</a></li>
-                                        <li><a href="#">Refunds</a></li>
-                                        <li><a href="#">Checkout</a></li>
-                                        <li><a href="#">Discount</a></li>
-                                        <li><a href="#">Refunds</a></li>
-                                        <li><a href="#">Policy Shipping</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Footer Links Area End Here -->
                                 <!-- Begin Footer Payment Area -->
                                 <div class="copyright text-center">
                                     <a href="#">
@@ -557,7 +532,7 @@ $data = mysqli_fetch_array($sql);
                                 <!-- Footer Payment Area End Here -->
                                 <!-- Begin Copyright Area -->
                                 <div class="copyright text-center pt-25">
-                                    <span><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
+                                    <span><a target="_blank" href="https://instagram.com/olivia_chyn/">Designed by: OliviaCahyaniAgustina</a></span>
                                 </div>
                                 <!-- Copyright Area End Here -->
                             </div>
