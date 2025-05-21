@@ -342,19 +342,18 @@ $data = mysqli_fetch_array($sql);
         <!-- Begin Login Content Area -->
         <div class="page-section mb-60">
             <div class="container">
-                <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
-                    <!-- Banner Image -->
-                    <div class="banner-wrapper text-center">
-                        <img src="images/bg-banner/4.png" alt="Banner Toko Elektronik" class="img-fluid" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%;">
-                        <p class="mt-3" style="font-size: 16px; color: #555;">
-                            Temukan smartphone, tablet, laptop, dan produk elektronik terbaik hanya di Technozone!<br>
-                            <a href="login.php" style="color: #007bff; text-decoration: underline;">Sudah punya akun? Login di sini.</a>
-                        </p>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
+                        <!-- Banner Image -->
+                        <div class="banner-wrapper text-center">
+                            <img src="images/bg-banner/4.jpg" alt="Banner Toko Elektronik" class="img-fluid" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%;">
+                            <p class="mt-3" style="font-size: 16px; color: #555;">
+                                Temukan smartphone, tablet, laptop, dan produk elektronik terbaik hanya di DigitalOracle!<br>
+                                <a href="login.php" style="color: #007bff; text-decoration: underline;">Sudah punya akun? Login di sini.</a>
+                            </p>
+                        </div>
                     </div>
+
                     <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
                         <form action="#">
                             <div class="login-form">
@@ -459,7 +458,7 @@ $data = mysqli_fetch_array($sql);
                                 <div class="footer-logo">
                                     <h1>DigitalOracle</h1>
                                     <p class="info">
-                                        Digital Oracle disini hadir untuk memenuhi berbagai keperluan teknologi yang Anda butuhkan. Yang menyediakan berbagai macam alat elektronik terbaru, mulai dari gadget, laptop, dan lain sebagainya.
+                                        Belanja elektronik jadi lebih mudah di DigitalOracle! Temukan smartphone, laptop, tablet, dan aksesori pilihan yang cocok untuk kebutuhan harian hingga profesional.
                                     </p>
                                 </div>
                                 <ul class="des">

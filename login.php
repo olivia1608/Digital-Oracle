@@ -377,9 +377,9 @@ if (isset($_POST["login"])) {
                         <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
                             <!-- Banner Image -->
                             <div class="banner-wrapper text-center">
-                                <img src="images/bg-banner/4.png" alt="Banner Toko Elektronik" class="img-fluid" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%;">
+                                <img src="images/bg-banner/4.jpg" alt="Banner Toko Elektronik" class="img-fluid" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%;">
                                 <p class="mt-3" style="font-size: 16px; color: #555;">
-                                    Temukan smartphone, tablet, laptop, dan produk elektronik terbaik hanya di Technozone!<br>
+                                    Temukan smartphone, tablet, laptop, dan produk elektronik terbaik hanya di DigitalOracle!<br>
                                     <a href="register.php" style="color: #007bff; text-decoration: underline;">Belum punya akun? Register di sini.</a>
                                 </p>
                             </div>
