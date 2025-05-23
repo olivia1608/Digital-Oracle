@@ -61,7 +61,7 @@
                         <!-- Begin Header Logo Area -->
                         <div class="col-lg-3">
                             <div class="logo pb-sm-30 pb-xs-30">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <h1>DigitalOracle</h1>
                                 </a>
                             </div>

@@ -60,7 +60,7 @@
                         <!-- Begin Header Logo Area -->
                         <div class="col-lg-3">
                             <div class="logo pb-sm-30 pb-xs-30">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <h1>DigitalOracle</h1>
                                 </a>
                             </div>
@@ -202,8 +202,8 @@
                                         <tr>
                                             <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
                                             <td class="li-product-thumbnail"><a href="#"><img src="images/product/small-size/5.jpg" alt="Li's Product Image"></a></td>
-                                            <td class="li-product-name"><a href="#">Accusantium dolorem1</a></td>
-                                            <td class="li-product-price"><span class="amount">$46.80</span></td>
+                                            <td class="li-product-name"><a href="#">Deded</a></td>
+                                            <td class="li-product-price"><span class="amount">Rp 300.000</span></td>
                                             <td class="quantity">
                                                 <label>Quantity</label>
                                                 <div class="cart-plus-minus">
@@ -212,13 +212,13 @@
                                                     <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                                 </div>
                                             </td>
-                                            <td class="product-subtotal"><span class="amount">$70.00</span></td>
+                                            <td class="product-subtotal"><span class="amount">Rp 300.000</span></td>
                                         </tr>
                                         <tr>
                                             <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
                                             <td class="li-product-thumbnail"><a href="#"><img src="images/product/small-size/6.jpg" alt="Li's Product Image"></a></td>
-                                            <td class="li-product-name"><a href="#">Mug Today is a good day</a></td>
-                                            <td class="li-product-price"><span class="amount">$71.80</span></td>
+                                            <td class="li-product-name"><a href="#">Deded</a></td>
+                                            <td class="li-product-price"><span class="amount">Rp 300.000</span></td>
                                             <td class="quantity">
                                                 <label>Quantity</label>
                                                 <div class="cart-plus-minus">
@@ -227,7 +227,7 @@
                                                     <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                                 </div>
                                             </td>
-                                            <td class="product-subtotal"><span class="amount">$60.50</span></td>
+                                            <td class="product-subtotal"><span class="amount">Rp 300.000</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -235,10 +235,6 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="coupon-all">
-                                        <div class="coupon">
-                                            <input id="coupon_code" class="input-text" name="coupon_code" value="" placeholder="Coupon code" type="text">
-                                            <input class="button" name="apply_coupon" value="Apply coupon" type="submit">
-                                        </div>
                                         <div class="coupon2">
                                             <input class="button" name="update_cart" value="Update cart" type="submit">
                                         </div>
