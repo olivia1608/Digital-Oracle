@@ -134,6 +134,16 @@
         </div>
         <!-- Li's Breadcrumb Area End Here -->
         <!-- content-wraper start -->
+        <?php
+        include 'admin/koneksi.php'; // koneksi ke database
+
+        $id = $_GET['id'];
+        $query = mysqli_query($koneksi, "SELECT p.*, k.nm_kategori FROM tb_produk p
+                                LEFT JOIN tb_kategori k ON p.id_kategori = k.id_kategori
+                                WHERE id_produk='$id'");
+        $data = mysqli_fetch_assoc($query);
+        ?>
+
         <div class="content-wraper">
             <div class="container">
                 <div class="row single-product-area">
@@ -142,77 +152,56 @@
                         <div class="product-details-left">
                             <div class="product-details-images slider-navigation-1">
                                 <div class="lg-image">
-                                    <a class="popup-img venobox vbox-item" href="images/product/large-size/1.jpg" data-gall="myGallery">
-                                        <img src="images/product/large-size/1.jpg" alt="product image">
-                                    </a>
-                                </div>
-                                <div class="lg-image">
-                                    <a class="popup-img venobox vbox-item" href="images/product/large-size/2.jpg" data-gall="myGallery">
-                                        <img src="images/product/large-size/2.jpg" alt="product image">
-                                    </a>
-                                </div>
-                                <div class="lg-image">
-                                    <a class="popup-img venobox vbox-item" href="images/product/large-size/3.jpg" data-gall="myGallery">
-                                        <img src="images/product/large-size/3.jpg" alt="product image">
-                                    </a>
-                                </div>
-                                <div class="lg-image">
-                                    <a class="popup-img venobox vbox-item" href="images/product/large-size/4.jpg" data-gall="myGallery">
-                                        <img src="images/product/large-size/4.jpg" alt="product image">
-                                    </a>
-                                </div>
-                                <div class="lg-image">
-                                    <a class="popup-img venobox vbox-item" href="images/product/large-size/5.jpg" data-gall="myGallery">
-                                        <img src="images/product/large-size/5.jpg" alt="product image">
-                                    </a>
-                                </div>
-                                <div class="lg-image">
-                                    <a class="popup-img venobox vbox-item" href="images/product/large-size/6.jpg" data-gall="myGallery">
-                                        <img src="images/product/large-size/6.jpg" alt="product image">
+                                    <a class="popup-img venobox vbox-item" href="admin/produk_img/<?= $data['gambar'] ?>" data-gall="myGallery">
+                                        <img src="admin/produk_img/<?= $data['gambar'] ?>" alt="<?= $data['nm_produk'] ?>" width="300" height="300">
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <!--// Product Details Left -->
                     </div>
+                    
+                    <?php if ($data['stok'] == 0) : ?>
+                        <script>
+                            alert('Stok produk ini sudah habis.');
+                            window.location.href = 'belanja.php';
+                        </script>
+                    <?php endif; ?>
+
 
                     <div class="col-lg-7 col-md-6">
-                        <div class="product-details-view-content pt-60">
-                            <div class="product-info">
-                                <h2>Deded</h2>
-                                <span class="product-details-ref">Kategori: Laptop</span>
-                                <div class="rating-box pt-20">
-                                </div>
+                        <div class="product-details-view-content p-2">
+                            <div class="product-info"
+                                <h2><?= $data['nm_produk'] ?></h2>
+                                <span class="product-details-ref">Kategori: <?= $data['nm_kategori'] ?></span>
                                 <div class="price-box pt-20">
-                                    <span class="new-price new-price-2">Rp222.222</span>
+                                    <span class="new-price new-price-2">Rp<?= number_format($data['harga'], 0, ',', '.') ?></span>
                                 </div>
                                 <div class="product-desc">
                                     <p>
-                                        <span>testing</span>
+                                        <span><?= nl2br($data['desk']) ?></span>
                                     </p>
+                                    <p><strong>Stok tersedia:</strong> <?= $data['stok'] ?> unit</p>
+                                    <!-- Tambahan -->
                                 </div>
                                 
-                                <div class="product-desc">
-                                    <p>
-                                        <span>Stok tersedia: 1 unit</span>
-                                    </p>
-                                </div>
-                                <div class="product-variants">
-                                    <div class="produt-variants-size">
-                                    </div>
-                                </div>
                                 <div class="single-add-to-cart">
-                                    <form action="#" class="cart-quantity">
+                                    <form action="tambah_ke_keranjang.php" method="POST" class="cart-quantity">
+                                        <input type="hidden" name="id_produk" value="<?= $data['id_produk'] ?>">
+                                        <input type="hidden" name="id_user" value="<?= $_SESSION['id_user'] ?>">
+                                        <input type="hidden" name="harga" value="<?= $data['harga'] ?>">
+                                        <input type="hidden" name="redirect_url" value="<?= $_SERVER['REQUEST_URI'] ?>">
                                         <div class="quantity">
                                             <label>Jumlah</label>
                                             <div class="cart-plus-minus">
-                                                <input class="cart-plus-minus-box" value="1" type="text">
+                                                <input name="jumlah" class="cart-plus-minus.box" value="1" type="number" min="1" max="<?= $data['stok'] ?>">
                                                 <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
                                                 <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                             </div>
                                         </div>
                                         <button class="add-to-cart" type="submit">Beli Sekarang</button>
                                     </form>
+
                                 </div>
                                 <div class="product-additional-info pt-25">
                                     <div class="product-social-sharing pt-25">
@@ -392,39 +381,54 @@
                         </div>
                         <div class="row">
                             <div class="product-active owl-carousel">
-                                <div class="col-lg-12">
+                                <?php
+                                include 'admin/koneksi.php';
+                                $id_produk = $_GET['id'];
+
+                                $query_produk_lain = mysqli_query($koneksi, "SELECT * FROM tb_produk WHERE id_produk != '$id_produk' ORDER BY RAND() LIMIT 6");
+                                while ($p = mysqli_fetch_array($query_produk_lain)) {
+                                ?>
+                                    <div class="col-lg-12">
                                     <!-- single-product-wrap start -->
                                     <div class="single-product-wrap">
                                         <div class="product-image">
-                                            <a href="single-product.html">
-                                                <img src="images/product/large-size/1.jpg" alt="Li's Product Image">
+                                            <a href="single-product.php?id_produk=<?= $p['id_produk'] ?>">
+                                                <img src="admin/product_img/<?= $p['gambar'] ?>" alt="<?= $p['nm_produk'] ?>" width="300" height="300">
                                             </a>
                                         </div>
                                         <div class="product_desc">
                                             <div class="product_desc_info">
                                                 <div class="product-review">
                                                     <h5 class="manufacturer">
-                                                        <a href="product-details.html">Graphic Corner</a>
+                                                        <a href="#"><?= $p['id_kategori'] ?>r</a> <!-- Bisa diganti nama kategori jika join -->
                                                     </h5>
-                                                    <div class="rating-box">
-                                                    </div>
                                                 </div>
-                                                <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a></h4>
+                                                <h4>
+                                                    <a class="product_name" href="detail_produk.php? id_produk=<? $p['id_produk'] ?>">
+                                                        <?= $p['nm_produk'] ?>
+                                                    </a>
+                                                </h4>
                                                 <div class="price-box">
-                                                    <span class="new-price">$46.80</span>
+                                                    <span class="new-price">Rp<?= number_format($p['harga'], 0, ',', '.') ?></span>
                                                 </div>
                                             </div>
                                             <div class="add-actions">
                                                 <ul class="add-actions-link">
-                                                    <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                    <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                    <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                    <li class="add-cart active">
+                                                        <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">Beli Sekarang</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>" title="Quick View" class="quick-view-btn">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- single-product-wrap end -->
                                 </div>
+                                <?php } ?>
                                 <div class="col-lg-12">
                                     <!-- single-product-wrap start -->
                                     <div class="single-product-wrap">

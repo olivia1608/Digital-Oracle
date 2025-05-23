@@ -1,12 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-<!-- contact32:04-->
+<!-- shopping-cart31:32-->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Hubungi Kami - DigitalOracle</title>
+    <title>Cart - DigitalOracle</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -35,10 +35,10 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- Bootstrap V4.1.3 Fremwork CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Main Style CSS -->
-    <link rel="stylesheet" href="style.css">
     <!-- Helper CSS -->
     <link rel="stylesheet" href="css/helper.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Modernizr js -->
@@ -53,7 +53,6 @@
     <div class="body-wrapper">
         <!-- Begin Header Area -->
         <header class="li-header-4">
-            <!-- Header Top Area End Here -->
             <!-- Begin Header Middle Area -->
             <div class="header-middle pl-sm-0 pr-sm-0 pl-xs-0 pr-xs-0">
                 <div class="container">
@@ -174,71 +173,97 @@
             <div class="container">
                 <div class="breadcrumb-content">
                     <ul>
-                        <li><a href="index.html">Beranda</a></li>
-                        <li class="active">Hubungi Kami</li>
+                        <li><a href="index.php">Beranda</a></li>
+                        <li class="active">Keranjang</li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- Li's Breadcrumb Area End Here -->
-        <!-- Begin Contact Main Page Area -->
-        <div class="contact-main-page mt-60 mb-40 mb-md-40 mb-sm-40 mb-xs-40">
-            <div class="container mb-60">
-                <div id="google-map"></div>
-            </div>
+        <!--Shopping Cart Area Strat-->
+        <div class="Shopping-cart-area pt-60 pb-60">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2">
-                        <div class="contact-page-side-content">
-                            <h3 class="contact-page-title">DigitalOracle</h3>
-                            <p class="contact-page-message mb-25">Digital Oracle adalah toko online yang menyediakan berbagai macam alat elektronik terbaru dengan harga terjangkau, mulai dari gadget, laptop, dan lain sebagainya.</p>
-                            <div class="single-contact-block">
-                                <h4><i class="fa fa-fax"></i> Alamat</h4>
-                                <p>Jl. Anggrek NO. 15 Kec.Kradenan Kab. Blora Jawa Tengah 58383</p>
+                    <div class="col-12">
+                        <form action="#">
+                            <div class="table-content table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="li-product-remove">Hapus</th>
+                                            <th class="li-product-thumbnail">Gambar</th>
+                                            <th class="cart-product-name">Produk</th>
+                                            <th class="li-product-price">Harga</th>
+                                            <th class="li-product-quantity">Jumlah</th>
+                                            <th class="li-product-subtotal">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
+                                            <td class="li-product-thumbnail"><a href="#"><img src="images/product/small-size/5.jpg" alt="Li's Product Image"></a></td>
+                                            <td class="li-product-name"><a href="#">Accusantium dolorem1</a></td>
+                                            <td class="li-product-price"><span class="amount">$46.80</span></td>
+                                            <td class="quantity">
+                                                <label>Quantity</label>
+                                                <div class="cart-plus-minus">
+                                                    <input class="cart-plus-minus-box" value="1" type="text">
+                                                    <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
+                                                    <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal"><span class="amount">$70.00</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
+                                            <td class="li-product-thumbnail"><a href="#"><img src="images/product/small-size/6.jpg" alt="Li's Product Image"></a></td>
+                                            <td class="li-product-name"><a href="#">Mug Today is a good day</a></td>
+                                            <td class="li-product-price"><span class="amount">$71.80</span></td>
+                                            <td class="quantity">
+                                                <label>Quantity</label>
+                                                <div class="cart-plus-minus">
+                                                    <input class="cart-plus-minus-box" value="1" type="text">
+                                                    <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
+                                                    <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal"><span class="amount">$60.50</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="single-contact-block">
-                                <h4><i class="fa fa-phone"></i> Telepon</h4>
-                                <p> (+62)831 3541 2239</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="coupon-all">
+                                        <div class="coupon">
+                                            <input id="coupon_code" class="input-text" name="coupon_code" value="" placeholder="Coupon code" type="text">
+                                            <input class="button" name="apply_coupon" value="Apply coupon" type="submit">
+                                        </div>
+                                        <div class="coupon2">
+                                            <input class="button" name="update_cart" value="Update cart" type="submit">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="single-contact-block last-child">
-                                <h4><i class="fa fa-envelope-o"></i> Email</h4>
-                                <p>info@digitaloracle.com</p>
+                            <div class="row">
+                                <div class="col-md-5 ml-auto">
+                                    <div class="cart-page-total">
+                                        <h2>Total Pesanan</h2>
+                                        <ul>
+                                            <li>Subtotal <span>Rp 130.00</span></li>
+                                            <li>Diskon <span>Rp 0</span></li>
+                                            <li>Total <span>Rp 130.00</span></li>
+                                        </ul>
+                                        <a href="#">Checkout</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 order-2 order-lg-1">
-                        <div class="contact-form-content pt-sm-55 pt-xs-55">
-                            <h3 class="contact-page-title">Kirimkan Pesan Anda</h3>
-                            <div class="contact-form">
-                                <form id="contact-form" action="http://demo.hasthemes.com/limupa-v3/limupa/mail.php" method="post">
-                                    <div class="form-group">
-                                        <label>Nama Anda <span class="required">*</span></label>
-                                        <input type="text" name="customerName" id="customername" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Email Anda <span class="required">*</span></label>
-                                        <input type="email" name="customerEmail" id="customerEmail" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Subjek</label>
-                                        <input type="text" name="contactSubject" id="contactSubject">
-                                    </div>
-                                    <div class="form-group mb-30">
-                                        <label>Pesan Anda</label>
-                                        <textarea name="contactMessage" id="contactMessage"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" value="submit" id="submit" class="li-btn-3" name="submit">kirim</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <p class="form-messege"></p>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Contact Main Page Area End Here -->
+        <!--Shopping Cart Area End-->
         <!-- Begin Footer Area -->
         <div class="footer">
             <!-- Begin Footer Static Top Area -->
@@ -444,204 +469,8 @@
     <script src="js/scrollUp.min.js"></script>
     <!-- Main/Activator js -->
     <script src="js/main.js"></script>
-    <!-- Google Map -->
-    <script src="https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyChs2QWiAhnzz0a4OEhzqCXwx_qA9ST_lE"></script>
-
-    <script>
-        // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 12,
-                scrollwheel: false,
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(40.740610, -73.935242), // New York
-                // How you would like to style the map. 
-                // This is where you would paste any style found on
-                styles: [{
-                        "featureType": "water",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#e9e9e9"
-                            },
-                            {
-                                "lightness": 17
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "landscape",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#f5f5f5"
-                            },
-                            {
-                                "lightness": 20
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "geometry.fill",
-                        "stylers": [{
-                                "color": "#ffffff"
-                            },
-                            {
-                                "lightness": 17
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.highway",
-                        "elementType": "geometry.stroke",
-                        "stylers": [{
-                                "color": "#ffffff"
-                            },
-                            {
-                                "lightness": 29
-                            },
-                            {
-                                "weight": 0.2
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.arterial",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#ffffff"
-                            },
-                            {
-                                "lightness": 18
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road.local",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#ffffff"
-                            },
-                            {
-                                "lightness": 16
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#f5f5f5"
-                            },
-                            {
-                                "lightness": 21
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi.park",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#dedede"
-                            },
-                            {
-                                "lightness": 21
-                            }
-                        ]
-                    },
-                    {
-                        "elementType": "labels.text.stroke",
-                        "stylers": [{
-                                "visibility": "on"
-                            },
-                            {
-                                "color": "#ffffff"
-                            },
-                            {
-                                "lightness": 16
-                            }
-                        ]
-                    },
-                    {
-                        "elementType": "labels.text.fill",
-                        "stylers": [{
-                                "saturation": 36
-                            },
-                            {
-                                "color": "#333333"
-                            },
-                            {
-                                "lightness": 40
-                            }
-                        ]
-                    },
-                    {
-                        "elementType": "labels.icon",
-                        "stylers": [{
-                            "visibility": "off"
-                        }]
-                    },
-                    {
-                        "featureType": "transit",
-                        "elementType": "geometry",
-                        "stylers": [{
-                                "color": "#f2f2f2"
-                            },
-                            {
-                                "lightness": 19
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "administrative",
-                        "elementType": "geometry.fill",
-                        "stylers": [{
-                                "color": "#fefefe"
-                            },
-                            {
-                                "lightness": 20
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "administrative",
-                        "elementType": "geometry.stroke",
-                        "stylers": [{
-                                "color": "#fefefe"
-                            },
-                            {
-                                "lightness": 17
-                            },
-                            {
-                                "weight": 1.2
-                            }
-                        ]
-                    }
-                ]
-            };
-
-            // Get the HTML DOM element that will contain your map 
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('google-map');
-
-            // Create the Google Map using our element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-
-            // Let's also add a marker while we're at it
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.740610, -73.935242),
-                map: map,
-                title: 'Limupa',
-                animation: google.maps.Animation.BOUNCE
-            });
-        }
-    </script>
 </body>
 
-<!-- contact32:04-->
+<!-- shopping-cart31:32-->
 
 </html>
