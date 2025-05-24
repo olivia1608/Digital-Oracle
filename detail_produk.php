@@ -782,22 +782,7 @@
                                 <div class="product-details-left">
                                     <div class="product-details-images slider-navigation-1">
                                         <div class="lg-image">
-                                            <img src="images/product/large-size/1.jpg" alt="product image">
-                                        </div>
-                                        <div class="lg-image">
-                                            <img src="images/product/large-size/2.jpg" alt="product image">
-                                        </div>
-                                        <div class="lg-image">
-                                            <img src="images/product/large-size/3.jpg" alt="product image">
-                                        </div>
-                                        <div class="lg-image">
-                                            <img src="images/product/large-size/4.jpg" alt="product image">
-                                        </div>
-                                        <div class="lg-image">
-                                            <img src="images/product/large-size/5.jpg" alt="product image">
-                                        </div>
-                                        <div class="lg-image">
-                                            <img src="images/product/large-size/6.jpg" alt="product image">
+                                            <img src="" alt="product image" id="modal-gambar">
                                         </div>
                                     </div>
                                 </div>
@@ -807,58 +792,41 @@
                             <div class="col-lg-7 col-md-6 col-sm-6">
                                 <div class="product-details-view-content pt-60">
                                     <div class="product-info">
-                                        <h2>Today is a good day Framed poster</h2>
-                                        <span class="product-details-ref">Reference: demo_15</span>
-                                        <div class="rating-box pt-20">
-                                            <ul class="rating rating-with-review-item">
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                <li class="review-item"><a href="#">Read Review</a></li>
-                                                <li class="review-item"><a href="#">Write Review</a></li>
-                                            </ul>
-                                        </div>
+                                        <h2 id="modal-nama-produk"></h2>
+                                        <span class="product-details-ref" id="modal-kategori">Kategori</span>
                                         <div class="price-box pt-20">
-                                            <span class="new-price new-price-2">$57.98</span>
+                                            <span class="new-price new-price-2" id="modal-harga">Rp0</span>
                                         </div>
                                         <div class="product-desc">
-                                            <p>
-                                                <span>100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
-                                                </span>
-                                            </p>
+                                            <p id="modal-desk"></p>
+                                            <p><strong>Stok tersedia:</strong> <span id="modal-stok">0</span> unit</p> <!-- Tambahan -->
                                         </div>
-                                        <div class="product-variants">
-                                            <div class="produt-variants-size">
-                                                <label>Dimension</label>
-                                                <select class="nice-select">
-                                                    <option value="1" title="S" selected="selected">40x60cm</option>
-                                                    <option value="2" title="M">60x90cm</option>
-                                                    <option value="3" title="L">80x120cm</option>
-                                                </select>
-                                            </div>
-                                        </div>
+
                                         <div class="single-add-to-cart">
-                                            <form action="#" class="cart-quantity">
+                                            <form action="tambah_ke_keranjang.php" method="POST" class="cart-quantity">
+                                                <input type="hidden" name="id_produk" id="input-id-produk">
+                                                <input type="hidden" name="id_user" value="<?= $_SESSION['id_user'] ?>">
+                                                <input type="hidden" name="harga" id="input-harga">
+                                                <input type="hidden" name="redirect_url" value="belanja.php">
+
                                                 <div class="quantity">
-                                                    <label>Quantity</label>
+                                                    <label>Jumlah</label>
                                                     <div class="cart-plus-minus">
-                                                        <input class="cart-plus-minus-box" value="1" type="text">
+                                                        <input class="cart-plus-minus-box" name="jumlah" id="input-jumlah" value="1" type="text">
                                                         <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
                                                         <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                                     </div>
                                                 </div>
-                                                <button class="add-to-cart" type="submit">Add to cart</button>
+
+                                                <button class="add-to-cart" type="submit">Beli Sekarang</button>
                                             </form>
+                                            
                                         </div>
                                         <div class="product-additional-info pt-25">
-                                            <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
                                             <div class="product-social-sharing pt-25">
                                                 <ul>
                                                     <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
                                                     <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                                                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
                                                     <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
                                                 </ul>
                                             </div>
@@ -871,6 +839,46 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            $(document).ready(function() {
+                $('.quick-view').click(function() {
+                    var id = $(this).data('id');
+
+                    $.ajax({
+                        url: 'get-produk.php',
+                        type: 'GET',
+                        data: {
+                            id: id
+                        },
+                        dataType: 'Json',
+                        success: function(data) {
+                            $('#modal-nama-produk').text(data.nm_produk);
+                            $('#modal-kategori').text(data.nm_kategori);
+                            $('#modal-harga').text('Rp' + parseInt(data.harga).toLocaleString('id-ID'));
+                            $('#modal-desk').text(data.desk);
+                            $('#modal-gambar').attr('src', 'admin/produk_img/' + data.gambar);
+                            $('#modal-stok').text(data.stok);
+
+                            // Set hidden form fields
+                            $('#input-id-produk').val(data.id_produk);
+                            $('#input-harga').val(data.harga);
+
+                            // Reset jumlah
+                            $('#input-jumlah').val(1);
+
+                            // Tampilkan modal
+                            $('#exampleModalCenter').modal('show');
+                        },
+                        error: function() {
+                            alert('Gagalmengambil data produk.');
+                        }
+                    });
+                });
+            });
+        </script>
+
+        
         <!-- Quick View | Modal Area End Here -->
     </div>
     <!-- Body Wrapper End Here -->
