@@ -204,7 +204,7 @@ if (isset($_POST["login"])) {
                     <div class="breadcrumb-content">
                         <ul>
                             <li><a href="index.html">Beranda</a></li>
-                            <li class="active">Register</li>
+                            <li class="active">Login</li>
                         </ul>
                     </div>
                 </div>
