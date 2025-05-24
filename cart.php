@@ -4,7 +4,7 @@ session_start();
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-<!-- shopping-cart31:32-->
+<!-- shopping-cart -->
 
 <head>
     <meta charset="utf-8">
@@ -88,21 +88,14 @@ session_start();
                                     } else {
                                         // Ambil nama user dari session atau database jika mau
                                         $nama_user = $_SESSION['username']; // Pastikan diset saat login
-                                    
+                                    }
                                     ?>
                                         <!-- User Icon with Dropdown -->
                                          <li class="hm-wishlist dropdown">
                                             <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fa fa-user"></i>
                                             </a>
-                                         </li>
-                                    }
-                                    <!-- Begin Header Middle Wishlist Area -->
-                                    <li class="hm-wishlist">
-                                        <a href="wishlist.html">
-                                            <i class="fa fa-user"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" style="padding: 10px; min-widht: 150px; text-align: center;">
+                                            <ul class="dropdown-menu" style="padding: 10px; min-width: 150px; text-align: center;">
                                             <li style="padding: 5px 10px; font-weight: bold;">
                                                 <?= htmlspecialchars($nama_user) ?>
                                             </li>
@@ -116,7 +109,8 @@ session_start();
                                             </li>
                                         </ul>
                                     </li>
-                                    <!-- Header Middle Wishlist Area End Here -->
+                                    
+                                    
                                     <!-- Begin Header Mini Cart Area -->
                                     <li class="hm-minicart">
                                         <div class="hm-minicart-trigger">
@@ -249,7 +243,7 @@ session_start();
                             }
 
                             // Hitung subtotal dan siapkan item
-                            $subtotal = o;
+                            $subtotal = 0;
                             $items = [];
                             while ($row = mysqli_fetch_assoc($query_pesanan)) {
                                 $total = $row['qty'] * $row['harga'];
@@ -348,17 +342,17 @@ session_start();
     JOIN tb_produk pr ON p.id_produk = pr.id_produk
     WHERE p.id_user = '$id_user'
 ");
-                                    if (mysqli_num_rows($query_pesanan) > 0) {
-                                        while ($row = mysqli_fetch_assoc($query_pesanan)) {
-                                            $subtotal = $row['qty'] * $row['harga'];
-                                            echo "<tr>
+                                        if (mysqli_num_rows($query_pesanan) > 0) {
+                                            while ($row = mysqli_fetch_assoc($query_pesanan)) {
+                                                $subtotal = $row['qty'] * $row['harga'];
+                                                echo "<tr>
         <td class='li-product-remove'>
             <a href='hapus_pesanan.php?id={$row['id_pesanan']}' onclick='return confirm(\"Yakin hapus item ini?\")'>
                 <i class='fa fa-times'></i>
             </a>
         </td>
         <td class='li-product-thumbnail'>
-            <a href='#'><img src='admin/produk_img/{$row['gambar']}' alt='{$row['nm_produk']}' width='70'</a>
+            <a href='#'><img src='admin/produk_img/{$row['gambar']}' alt='{$row['nm_produk']}' width='70'></a>
         </td>
         <td class='li-product-name'><a href='#'>{$row['nm_produk']}</a></td>
         <td class='li-product-price'><span class='amount'>Rp" . number_format($row['harga'], 0, ',', '.') . "</span></td>
@@ -638,6 +632,6 @@ session_start();
     <script src="js/main.js"></script>
 </body>
 
-<!-- shopping-cart31:32-->
+<!-- shopping-cart -->
 
 </html>
