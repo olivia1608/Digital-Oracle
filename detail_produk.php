@@ -126,7 +126,7 @@
             <div class="container">
                 <div class="breadcrumb-content">
                     <ul>
-                        <li><a href="index.html">Belanja</a></li>
+                        <li><a href="index.php">Belanja</a></li>
                         <li class="active">Detail Produk</li>
                     </ul>
                 </div>

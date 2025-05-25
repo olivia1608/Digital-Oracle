@@ -201,7 +201,7 @@ $data = mysqli_fetch_array($sql);
             <div class="container">
                 <div class="breadcrumb-content">
                     <ul>
-                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="index.php">Beranda</a></li>
                         <li class="active">Register</li>
                     </ul>
                 </div>

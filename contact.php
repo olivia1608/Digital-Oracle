@@ -174,7 +174,7 @@
             <div class="container">
                 <div class="breadcrumb-content">
                     <ul>
-                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="index.php">Beranda</a></li>
                         <li class="active">Hubungi Kami</li>
                     </ul>
                 </div>
