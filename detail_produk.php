@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -72,13 +75,91 @@
                             <!-- Begin Header Middle Right Area -->
                             <div class="header-middle-right">
                                 <ul class="hm-menu">
-                                    <!-- Begin Header Middle Wishlist Area -->
-                                    <li class="hm-wishlist">
-                                        <a href="wishlist.html">
-                                            <i class="fa fa-user"></i>
-                                        </a>
-                                    </li>
-                                    <!-- Header Middle Wishlist Area End Here -->
+                                    <?php
+
+                                    if (!isset($_SESSION['id_user'])) {
+                                    ?>
+                                        <!-- Jika belum login -->
+                                        <li class="hm-wishlist">
+                                            <a href="login.php" title="Login">
+                                                <i class="fa fa-user"></i>
+                                            </a>
+                                        </li>
+                                    <?php
+                                    } else {
+                                        // Ambil nama user dari session atau database jika mau
+                                        $nama_user = $_SESSION['username']; // pastikan diset saat login
+
+                                    ?>
+                                        <!-- User Icon with Dropdown -->
+                                        <li class="hm-wishlist dropdown">
+                                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-user"></i>
+                                            </a>
+                                            <ul class="dropdown-menu" style="padding: 10px; min-width: 150px; text-align: center;">
+                                                <li style="padding: 5px 10px; font-weight: bold;">
+                                                    <?= htmlspecialchars($nama_user) ?>
+                                                </li>
+                                                <li>
+                                                    <hr style="margin: 5px 0;">
+                                                </li> <!-- Garis pembatas -->
+                                                <li>
+                                                    <a href="logout.php" style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+                                                        <i class="fa fa-sign-out"></i> Logout
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
+                                        <!-- Mini Cart -->
+                                        <li class="hm-minicart">
+                                            <div class="hm-minicart-trigger">
+                                                <span class="item-icon"></span>
+                                                <span class="item-text">£80.00
+                                                    <span class="cart-item-count">2</span>
+                                                </span>
+                                            </div>
+                                            <span></span>
+                                            <div class="minicart">
+                                                <ul class="minicart-product-list">
+                                                    <li>
+                                                        <a href="single-product.html" class="minicart-product-image">
+                                                            <img src="images/product/small-size/1.jpg" alt="cart products">
+                                                        </a>
+                                                        <div class="minicart-product-details">
+                                                            <h6><a href="single-product.html">Aenean eu tristique</a></h6>
+                                                            <span>£40 x 1</span>
+                                                        </div>
+                                                        <button class="close">
+                                                            <i class="fa fa-close"></i>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <a href="single-product.html" class="minicart-product-image">
+                                                            <img src="images/product/small-size/2.jpg" alt="cart products">
+                                                        </a>
+                                                        <div class="minicart-product-details">
+                                                            <h6><a href="single-product.html">Aenean eu tristique</a></h6>
+                                                            <span>£40 x 1</span>
+                                                        </div>
+                                                        <button class="close">
+                                                            <i class="fa fa-close"></i>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                                <p class="minicart-total">SUBTOTAL: <span>£80.00</span></p>
+                                                <div class="minicart-button">
+                                                    <a href="cart.php" class="li-button li-button-dark li-button-fullwidth li-button-sm">
+                                                        <span>View Full Cart</span>
+                                                    </a>
+                                                    <a href="checkout.html" class="li-button li-button-fullwidth li-button-sm">
+                                                        <span>Checkout</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                             <!-- Header Middle Right Area End Here -->
@@ -98,7 +179,7 @@
                                 <nav>
                                     <ul>
                                         <li><a href="index.php">BERANDA</a></li>
-                                        <li><a href="balanja.php">BELANJA</a></li>
+                                        <li><a href="belanja.php">BELANJA</a></li>
                                         <li><a href="contact.php">HUBUNGI KAMI</a></li>
                                     </ul>
                                 </nav>
@@ -160,7 +241,7 @@
                         </div>
                         <!--// Product Details Left -->
                     </div>
-                    
+
                     <?php if ($data['stok'] == 0) : ?>
                         <script>
                             alert('Stok produk ini sudah habis.');
@@ -184,7 +265,7 @@
                                     <p><strong>Stok tersedia:</strong> <?= $data['stok'] ?> unit</p>
                                     <!-- Tambahan -->
                                 </div>
-                                
+
                                 <div class="single-add-to-cart">
                                     <form action="tambah_ke_keranjang.php" method="POST" class="cart-quantity">
                                         <input type="hidden" name="id_produk" value="<?= $data['id_produk'] ?>">
@@ -389,45 +470,45 @@
                                 while ($p = mysqli_fetch_array($query_produk_lain)) {
                                 ?>
                                     <div class="col-lg-12">
-                                    <!-- single-product-wrap start -->
-                                    <div class="single-product-wrap">
-                                        <div class="product-image">
-                                            <a href="single-product.php?id_produk=<?= $p['id_produk'] ?>">
-                                                <img src="admin/product_img/<?= $p['gambar'] ?>" alt="<?= $p['nm_produk'] ?>" width="300" height="300">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="product_desc_info">
-                                                <div class="product-review">
-                                                    <h5 class="manufacturer">
-                                                        <a href="#"><?= $p['id_kategori'] ?>r</a> <!-- Bisa diganti nama kategori jika join -->
-                                                    </h5>
-                                                </div>
-                                                <h4>
-                                                    <a class="product_name" href="detail_produk.php? id_produk=<? $p['id_produk'] ?>">
-                                                        <?= $p['nm_produk'] ?>
-                                                    </a>
-                                                </h4>
-                                                <div class="price-box">
-                                                    <span class="new-price">Rp<?= number_format($p['harga'], 0, ',', '.') ?></span>
-                                                </div>
+                                        <!-- single-product-wrap start -->
+                                        <div class="single-product-wrap">
+                                            <div class="product-image">
+                                                <a href="single-product.php?id_produk=<?= $p['id_produk'] ?>">
+                                                    <img src="admin/product_img/<?= $p['gambar'] ?>" alt="<?= $p['nm_produk'] ?>" width="300" height="300">
+                                                </a>
                                             </div>
-                                            <div class="add-actions">
-                                                <ul class="add-actions-link">
-                                                    <li class="add-cart active">
-                                                        <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">Beli Sekarang</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>" title="Quick View" class="quick-view-btn">
-                                                            <i class="fa fa-eye"></i>
+                                            <div class="product_desc">
+                                                <div class="product_desc_info">
+                                                    <div class="product-review">
+                                                        <h5 class="manufacturer">
+                                                            <a href="#"><?= $p['id_kategori'] ?>r</a> <!-- Bisa diganti nama kategori jika join -->
+                                                        </h5>
+                                                    </div>
+                                                    <h4>
+                                                        <a class="product_name" href="detail_produk.php? id_produk=<? $p['id_produk'] ?>">
+                                                            <?= $p['nm_produk'] ?>
                                                         </a>
-                                                    </li>
-                                                </ul>
+                                                    </h4>
+                                                    <div class="price-box">
+                                                        <span class="new-price">Rp<?= number_format($p['harga'], 0, ',', '.') ?></span>
+                                                    </div>
+                                                </div>
+                                                <div class="add-actions">
+                                                    <ul class="add-actions-link">
+                                                        <li class="add-cart active">
+                                                            <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">Beli Sekarang</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>" title="Quick View" class="quick-view-btn">
+                                                                <i class="fa fa-eye"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
+                                        <!-- single-product-wrap end -->
                                     </div>
-                                    <!-- single-product-wrap end -->
-                                </div>
                                 <?php } ?>
                                 <div class="col-lg-12">
                                     <!-- single-product-wrap start -->
@@ -820,7 +901,7 @@
 
                                                 <button class="add-to-cart" type="submit">Beli Sekarang</button>
                                             </form>
-                                            
+
                                         </div>
                                         <div class="product-additional-info pt-25">
                                             <div class="product-social-sharing pt-25">
@@ -878,7 +959,7 @@
             });
         </script>
 
-        
+
         <!-- Quick View | Modal Area End Here -->
     </div>
     <!-- Body Wrapper End Here -->

@@ -224,24 +224,24 @@ $data = mysqli_fetch_array($sql);
                     </div>
 
                     <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
-                        <form action="#">
+                        <form method="post">
                             <div class="login-form">
                                 <h4 class="login-title">Register</h4>
                                 <div class="row">
                                     <div class="col-md-12 mb-20">
                                         <label>Username</label>
-                                        <input class="mb-0" type="email" placeholder="Masukkan Username">
+                                        <input class="mb-0" type="text" placeholder="Masukkan Username" name="username" required>
                                     </div>
                                     <div class="col-md-6 mb-20">
                                         <label>Password</label>
-                                        <input class="mb-0" type="password" placeholder="Password">
+                                        <input class="mb-0" type="password" placeholder="Masukkan Password" name="password" required>
                                     </div>
                                     <div class="col-md-6 mb-20">
                                         <label>Konfirmasi Password</label>
-                                        <input class="mb-0" type="password" placeholder="Masukkan Konfirmasi Password">
+                                        <input class="mb-0" type="password" placeholder="Masukkan Konfirmasi Password" name="password2" required>
                                     </div>
                                     <div class="col-12">
-                                        <button class="register-button mt-0">Register</button>
+                                        <button class="register-button mt-0" type="submit" name="register">Register</button>
                                     </div>
                                 </div>
                             </div>

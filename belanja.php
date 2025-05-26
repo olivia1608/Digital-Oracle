@@ -848,7 +848,7 @@ session_start();
                     var id = $(this).data('id');
 
                     $.ajax({
-                        url: 'get-produk.php',
+                        url: 'get-product.php',
                         type: 'GET',
                         data: {
                             id: id

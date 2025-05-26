@@ -17,7 +17,7 @@ if (isset($_POST["login"])) {
             // Set session
             $_SESSION["login"] = true;
             $_SESSION["username"] = $row["username"];
-            $_SESSION["status"] = $row["status"];
+            $_SESSION["id_user"] = $row["id_user"];
             header("refresh:0, index.php");
         } else {
             echo "<script>alert('Username atau password yang anda masukkan salah')</script>";
@@ -79,7 +79,7 @@ if (isset($_POST["login"])) {
     <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
-    <<!-- Begin Body Wrapper -->
+    <!-- Begin Body Wrapper -->
         <div class="body-wrapper">
             <!-- Begin Header Area -->
             <header>

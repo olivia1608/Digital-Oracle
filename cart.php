@@ -79,83 +79,37 @@ session_start();
                                     if (!isset($_SESSION['id_user'])) {
                                     ?>
                                         <!-- Jika belum login -->
-                                         <li class="hm-wishlist">
+                                        <li class="hm-wishlist">
                                             <a href="login.php" title="Login">
                                                 <i class="fa fa-user"></i>
                                             </a>
-                                         </li>
+                                        </li>
                                     <?php
                                     } else {
                                         // Ambil nama user dari session atau database jika mau
-                                        $nama_user = $_SESSION['username']; // Pastikan diset saat login
-                                    }
+                                        $nama_user = $_SESSION['username']; // pastikan diset saat login
+
                                     ?>
                                         <!-- User Icon with Dropdown -->
-                                         <li class="hm-wishlist dropdown">
-                                            <ul class="dropdown-menu" style="padding: 10px; min-width: 150px; text-align: center;">
-                                            <li style="padding: 5px 10px; font-weight: bold;">
-                                                <?= htmlspecialchars($nama_user) ?>
-                                            </li>
-                                            <li>
-                                                <hr style="margin: 5px 0;">
-                                            </li> <!-- Garis Pembatas -->
-                                            <li>
-                                                <a href="logout.php" style="display: flex; align-items: center; justify-content: center; gap: 5px;">
-                                                    <i class="fa fa-sign-out"></i> Logout
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                    
-                                    <!-- Begin Header Mini Cart Area -->
-                                    <li class="hm-minicart">
-                                        <div class="hm-minicart-trigger">
-                                            <span class="item-icon"></span>
-                                            <span class="item-text">£80.00
-                                                <span class="cart-item-count">2</span>
-                                            </span>
-                                        </div>
-                                        <span></span>
-                                        <div class="minicart">
-                                            <ul class="minicart-product-list">
-                                                <li>
-                                                    <a href="single-product.html" class="minicart-product-image">
-                                                        <img src="images/product/small-size/5.jpg" alt="cart products">
-                                                    </a>
-                                                    <div class="minicart-product-details">
-                                                        <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                        <span>£40 x 1</span>
-                                                    </div>
-                                                    <button class="close" title="Remove">
-                                                        <i class="fa fa-close"></i>
-                                                    </button>
+                                        <li class="hm-wishlist dropdown">
+                                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-user"></i>
+                                            </a>
+                                            <ul class="dropdown-menu" style="padding: 10px; min-width: 150px; text-align: center; right: 0; left: auto; transform: translateX(-40%);">
+                                                <li style="padding: 5px 10px; font-weight: bold;">
+                                                    <?= htmlspecialchars($nama_user) ?>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product.html" class="minicart-product-image">
-                                                        <img src="images/product/small-size/6.jpg" alt="cart products">
+                                                    <hr style="margin: 5px 0;">
+                                                </li> <!-- Garis pembatas -->
+                                                <li>
+                                                    <a href="logout.php" style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+                                                        <i class="fa fa-sign-out"></i> Logout
                                                     </a>
-                                                    <div class="minicart-product-details">
-                                                        <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                        <span>£40 x 1</span>
-                                                    </div>
-                                                    <button class="close" title="Remove">
-                                                        <i class="fa fa-close"></i>
-                                                    </button>
                                                 </li>
                                             </ul>
-                                            <p class="minicart-total">SUBTOTAL: <span>£80.00</span></p>
-                                            <div class="minicart-button">
-                                                <a href="shopping-cart.html" class="li-button li-button-fullwidth li-button-dark">
-                                                    <span>View Full Cart</span>
-                                                </a>
-                                                <a href="checkout.html" class="li-button li-button-fullwidth">
-                                                    <span>Checkout</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- Header Mini Cart Area End Here -->
+                                        </li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                             <!-- Header Middle Right Area End Here -->
@@ -226,6 +180,45 @@ session_start();
 
                             $id_user = $_SESSION['id_user'];
 
+                            // Pastikan data qty tersedia
+                            if (isset($_POST['qty']) && is_array($_POST['qty'])) {
+                                foreach ($_POST['qty'] as $id_pesanan => $qty) {
+                                    $qty = (int)$qty;
+                                    if ($qty < 1) $qty = 1;
+
+                                    // Ambil harga produk terkait dari join tabel
+                                    $query = mysqli_query($koneksi, "
+                                        SELECT pr.harga
+                                        FROM tb_pesanan p
+                                        JOIN tb_produk pr ON p.id_produk = pr.id_produk
+                                        WHERE p.id_pesanan = '$id_pesanan' AND p.id-user = '$id_user'
+                                    ");
+                                    $data = mysqli_fetch_assoc($query);
+                                    $harga = $data['harga'];
+                                    $total = $qty * $harga;
+
+                                    // Update qty dan total
+                                    mysqli_query($koneksi, "
+                                        UPDATE tb_pesanan
+                                        SET qty = '$qty', total = '$total'
+                                        WHERE id_pesanan = '$id_pesanan' AND id_user = '$id_user'
+                                    ");
+                                }
+                            }
+
+                            echo "<script>alert('Keranjang berhasil diperbarui.); window.location='cart.php';</script>";
+                            exit;
+                        }
+
+
+                        if (isset($_POST['checkout'])) {
+                            if (!isset($_SESSION['id_user'])) {
+                                echo "<script>alert('User tidak ditemukan!'); window.location='cart.php';</script>";
+                                exit;
+                            }
+
+                            $id_user = $_SESSION['id_user'];
+
                             // Ambil data pesanan user
                             $query_pesanan = mysqli_query($koneksi, "
                                 SELECT p.*, pr.harga
@@ -271,17 +264,17 @@ session_start();
                             $tgl = date('Y-m-d H:i:s');
                             $query_insert_jual = mysqli_query($koneksi, "INSERT INTO tb_jual (id_jual, id_user, tgl_jual, total, diskon)
                                 VALUES ('$next_id', '$id_user', '$tgl', '$total_bayar', '$diskon')");
-                            
+
                             if (!$query_insert_jual) {
                                 echo "<script>alert('Gagal menyimpan data penjualan!'); window.location='cart.php';</script>";
                                 exit;
                             }
 
                             // Insert ke tb_jualdtl
-                            foreach ($items as $items) {
+                            foreach ($items as $item) {
                                 $query_dtl = mysqli_query($koneksi, "INSERT INTO tb_jualdtl (id_jual, id_produk, qty, harga)
                                     VALUES ('$next_id', '{$item['id_produk']}', '{$item['qty']}', '{$item['harga']}')");
-                                
+
                                 if (!$query_dtl) {
                                     echo "<script>alert('Gagal menyimpan detail penjualan!'); window.location='cart.php';</script>";
                                     exit;
@@ -328,7 +321,7 @@ session_start();
                                         $username = $_SESSION['username'];
 
                                         // Ambil id_user dari username
-                                        $query_user = mysqli_query($koneksi, "SELECT id_user FROM tb_user WHERE username = '$username'"); 
+                                        $query_user = mysqli_query($koneksi, "SELECT id_user FROM tb_user WHERE username = '$username'");
                                         $data_user = mysqli_fetch_assoc($query_user);
                                         $id_user = $data_user['id_user'];
 
@@ -365,11 +358,11 @@ session_start();
             <span class='amount'>Rp" . number_format($subtotal, 0, ',', '.') . "</span>
         </td>
     </tr>";
+                                            }
+                                        } else {
+                                            echo "<tr><td colspan='6'>Keranjang kosong.</td></tr>";
                                         }
-                                    } else {
-                                        echo "<tr><td colspan='6'>Keranjang kosong.</td></tr>";
-                                    }
-                                    ?>
+                                        ?>
 
                                     </tbody>
                                 </table>

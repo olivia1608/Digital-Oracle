@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'admin/loneksi.php';
+include 'admin/koneksi.php';
 
 if (!isset($_SESSION['username'])) {
     echo "<script>alert('Silahkan login terlabih dahulu.'); window.location='login.php';</script>";
@@ -12,7 +12,7 @@ if (!empty($_GET['id'])) {
     $username = $_SESSION['username'];
 
     // Ambil id_user dari username
-    $query_user = mysqli_query($koneksi, "SELECT id_user FROM tb-user WHERE username = '$username'");
+    $query_user = mysqli_query($koneksi, "SELECT id_user FROM tb_user WHERE username = '$username'");
     if (!$query_user || mysqli_num_rows($query_user) == 0) {
         echo "<script>alert('User tidak ditemukan.'); window.location='cart.php';</script>";
         exit;
