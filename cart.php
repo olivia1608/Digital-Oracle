@@ -191,7 +191,7 @@ session_start();
                                         SELECT pr.harga
                                         FROM tb_pesanan p
                                         JOIN tb_produk pr ON p.id_produk = pr.id_produk
-                                        WHERE p.id_pesanan = '$id_pesanan' AND p.id-user = '$id_user'
+                                        WHERE p.id_pesanan = '$id_pesanan' AND p.id_user = '$id_user'
                                     ");
                                     $data = mysqli_fetch_assoc($query);
                                     $harga = $data['harga'];
@@ -206,7 +206,7 @@ session_start();
                                 }
                             }
 
-                            echo "<script>alert('Keranjang berhasil diperbarui.); window.location='cart.php';</script>";
+                            echo "<script>alert('Keranjang berhasil diperbarui.'); window.location='cart.php';</script>";
                             exit;
                         }
 
