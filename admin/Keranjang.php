@@ -24,7 +24,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Produk - DigitalOracle Admin</title>
+    <title>Keranjang - DigitalOracle Admin</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -170,11 +170,11 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Produk</h1>
+            <h1>Keranjang</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Beranda</a></li>
-                    <li class="breadcrumb-item active">Produk</li>
+                    <li class="breadcrumb-item active">Keranjang</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -183,9 +183,33 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="t_produk.php" class="btn btn-primary mt-3">
-                            <i class="bi bi-plus-lg"></i> Tambah Data
-                        </a>
+                        <?php
+                        include 'koneksi.php';
+
+                        // Ambil data kategori
+                        $sql_kategori = "SELECT id_kategori, nm_kategori FROM tb_kategori";
+                        $result_kategori = $koneksi->query($sql_kategori);
+
+                        // Tangkap filter kategori dari GET
+                        $filter_kategori = isset($_GET['kategori']) ? $_GET['kategori'] : '';
+                        ?>
+
+                        <div class="filter-bar mt-3">
+                            <form class="filter-form d-flex align-items-center" method="GET" action="">
+                                <select name="kategori" class="form-select me-2" style="max-width: 200px;" title="Pilih kategori">
+                                    <option value="">-- Semua Kategori --</option>
+                                    <?php
+                                    if ($result_kategori->num_rows > 0) {
+                                        while ($row = $result_kategori->fetch_assoc()) {
+                                            $selected = ($filter_kategori == $row['id_kategori']) ? "selected" : "";
+                                            echo "<option value='" . $row['id_kategori'] . "' $selected>" . htmlspecialchars($row['nm_kategori']) . "</option>";
+                                        }
+                                    }
+                                    ?>
+                                </select>
+                                <button type="submit" class="btn btn-primary ms-2">Filter</button>
+                            </form>
+                        </div><!-- End Filter Bar -->
                     </div>
                 </div>
             </div>
@@ -200,19 +224,53 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                         <div class="card-body">
 
                             <!-- Table with stripped rows -->
+                             <?php
+                             include 'koneksi.php';
+
+                             // Query untuk mengambil data pesanan dengan join ke produk dan kategori
+                             $sql = "SELECT p.id_pesanan, p.id_produk, p.qty, p.total, u.username 
+                             FROM tb_pesanan p
+                             JOIN tb_user u ON p.id_user = u.id_user 
+                             JOIN tb_produk pr ON p.id_produk = pr.id_produk
+                             JOIN tb_kategori k ON pr.id_kategori = k.id_kategori";
+
+                            // Tambahkan filter kategori jika dipilih
+                            if (!empty($filter_kategori)) {
+                                $sql .= "WHERE k.id_kategori = '$filter_kategori'";
+                            }
+
+                            $result = $koneksi->query($sql);
+                            ?>
+
                             <table class="table table-striped mt-2">
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>
-                                        <th scope="col">Nama Produk</th>
-                                        <th scope="col">Harga</th>
-                                        <th scope="col">Stok</th>
-                                        <th scope="col">Nama Kategori</th>
-                                        <th scope="col">Gambar</th>
-                                        <th scope="col">Aksi</th>
+                                        <th scope="col">Kode Pesanan</th>
+                                        <th scope="col">Kode Produk</th>
+                                        <th scope="col">Jumlah</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Pengguna</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                    $no = 1;
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            echo "<tr>";
+                                            echo "<td>" . $no++ . "</td>";
+                                            echo "<td>" . $row["id_pesanan"] ."</td>";
+                                            echo "<td>" . $row["id_produk"] ."</td>";
+                                            echo "<td>" . $row["qty"] ."</td>";
+                                            echo "<td>Rp " . number_format($row["total"], 0, ",", ".") ."</td>";
+                                            echo "<td>" . $row["username"] . "</td>";
+                                            echo "</tr>";
+                                        }
+                                    } else {
+                                        echo "<tr><td colspan='6' class='text-center'>Belum ada data pesanan</td></tr>";
+                                    }
+                                    ?>
                                     <?php
                                     include "koneksi.php";
                                     $no = 1;
