@@ -250,7 +250,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                                             <tr>
                                                 <td><?= $no++ ?></td>
                                                 <td><?= $d['nm_produk'] ?></td>
-                                                <td>Rp <?= number_format($d['harga produk'], 0, ',', '.') ?></td>
+                                                <td>Rp <?= number_format($d['harga_produk'], 0, ',', '.') ?></td>
                                                 <td><?= $d['qty'] ?></td>
                                                 <td>Rp <?= number_format($d['subtotal'], 0, ',', '.') ?></td>
                                             </tr>

@@ -269,62 +269,6 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                                         echo "<tr><td colspan='7' class='text-center'>Belum ada data penjualan</td></tr>";
                                     }
                                     ?>
-                                    <?php
-                                    include "koneksi.php";
-                                    $no = 1;
-
-                                    //Ambil keyword pencarian dari GET
-                                    $query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
-
-                                    //Tambahkan WHERE jika query tidak kosong
-                                    $sql_query = "SELECT tb_produk.*, tb_kategori.nm_kategori FROM tb_produk LEFT JOIN tb_kategori ON tb_produk.id_kategori = tb_kategori.id_kategori";
-
-                                    if (!empty($query)) {
-                                        $sql_query .= " WHERE tb_produk.nm_produk LIKE '%$query%' OR tb_kategori.nm_kategori LIKE '%$query%' OR tb_produk.desk LIKE '%$query%'";
-                                    }
-
-                                    //Tambahkan ORDER BY
-                                    $sql_query .= " ORDER BY tb_produk.id_produk ASC";
-
-                                    $sql = mysqli_query($koneksi, $sql_query);
-
-                                    if (mysqli_num_rows($sql) > 0) {
-                                        while ($hasil = mysqli_fetch_array($sql)) {
-                                    ?>
-                                            <tr>
-                                                <td><?php echo $no++; ?></td>
-                                                <td><?php echo $hasil['nm_produk']; ?></td>
-                                                <td>Rp <?php echo number_format($hasil['harga'], 0, ',', '.'); ?></td>
-                                                <td><?php echo $hasil['stok']; ?></td>
-                                                <td><?php echo $hasil['desk']; ?></td>
-                                                <td><?php echo $hasil['nm_kategori']; ?></td>
-                                                <td>
-                                                    <?php if (!empty($hasil['gambar'])) { ?>
-                                                        <img src="produk_img/<?php echo $hasil['gambar']; ?>" width="100">
-                                                    <?php } else { ?>
-                                                        Tidak ada gambar
-                                                    <?php } ?>
-                                                </td>
-                                                <td>
-                                                    <a href="e_produk.php?id=<?php echo $hasil['id_produk']; ?>" class="btn btn-warning">
-                                                        <i class="bi bi-pencil-square"></i>
-                                                    </a>
-                                                    <a href="h_produk.php?id=<?php echo $hasil['id_produk']; ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">
-                                                        <i class="bi bi-trash"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        <?php
-                                        }
-                                    } else {
-                                        ?>
-                                        <tr>
-                                            <td colspan="8" class="text-center">Belum Ada Data</td>
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>
-
                                 </tbody>
                             </table>
                             <!-- End Table with stripped rows -->

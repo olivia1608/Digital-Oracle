@@ -349,7 +349,7 @@ session_start();
         <td class='quantity'>
             <label>Quantity</label>
             <div class='cart-plus-minus'>
-                <input class='cart-plus-minus-box' value='{$row['qty']}' type='text' readonly>
+            <input name='qty[{$row['id_pesanan']}]' class='cart-plus-minus-box' value='{$row['qty']}' type='number' min='1'>
                 <div class='dec qtybutton'><i class='fa fa-angle-down'></i></div>
                 <div class='inc qtybutton'><i class='fa fa-angle-up'></i></div>
             </div>

@@ -131,7 +131,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
             </li><!-- End Kategori Produk Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link" href="produk.php">
+                <a class="nav-link collapsed" href="produk.php">
                     <i class="bi bi-shop"></i>
                     <span>Produk</span>
                 </a>
@@ -152,7 +152,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
             </li><!-- End Transaksi Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="laporan.php">
+                <a class="nav-link" href="laporan.php">
                     <i class="bi bi-file-earmark-bar-graph"></i>
                     <span>Laporan</span>
                 </a>
@@ -238,7 +238,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
 
                 if (laporanSelect === "produk") {
                     let optionAll = document.createElement("option");
-                    option.value = "all";
+                    optionAll.value = "all";
                     optionAll.textContent = "All";
                     tipeLaporanSelect.appendChild(optionAll);
 
