@@ -203,6 +203,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                                 <button type="submit" class="btn btn-primary ms-2">Filter</button>
                             </form>
                         </div><!-- End Filter Bar -->
+
                     </div>
                 </div>
             </div>
@@ -229,8 +230,9 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
 
                             // Tambahkan filter kategori jika dipilih
                             if (!empty($filter_kategori)) {
-                                $sql .= "WHERE k.id_kategori = '$filter_kategori'";
+                                $sql .= " WHERE k.id_kategori = '" . mysqli_real_escape_string($koneksi, $filter_kategori) . "'";
                             }
+
 
                             $result = $koneksi->query($sql);
                             ?>

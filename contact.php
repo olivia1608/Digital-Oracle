@@ -115,7 +115,7 @@
                                                     </button>
                                                 </li>
                                             </ul>
-                                            <p class="minicart-total">SUBTOTAL: <span>£80.00</span></p>
+                                            <p class="minicart-total">SUBTOTAL: <span>Rp.0</span></p>
                                             <div class="minicart-button">
                                                 <a href="shopping-cart.html" class="li-button li-button-fullwidth li-button-dark">
                                                     <span>View Full Cart</span>

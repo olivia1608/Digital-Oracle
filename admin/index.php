@@ -109,62 +109,61 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
   </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
+    <aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+        <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
-        <a class="nav-link " href="index.php">
-          <i class="bi bi-grid"></i>
-          <span>Beranda</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">
+                    <i class="bi bi-house-door"></i>
+                    <span>Beranda</span>
+                </a>
+            </li><!-- End Beranda Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="kategori.php">
-          <i class="bi bi-calendar4-week"></i>
-          <span>Kategori</span>
-        </a>
-      </li><!-- End Kategori Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="kategori.php">
+                    <i class="bi bi-tags"></i>
+                    <span>Kategori Produk</span>
+                </a>
+            </li><!-- End Kategori Produk Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="produk.php">
-          <i class="bi bi-shop"></i>
-          <span>Produk</span>
-        </a>
-      </li><!-- End Produk Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="produk.php">
+                    <i class="bi bi-shop"></i>
+                    <span>Produk</span>
+                </a>
+            </li><!-- End Produk Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="keranjang.php">
-          <i class="bi bi-cart"></i>
-          <span>Keranjang</span>
-        </a>
-      </li><!-- End Keranjang Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="keranjang.php">
+                    <i class="bi bi-cart"></i>
+                    <span>Keranjang</span>
+                </a>
+            </li><!-- End Keranjang Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="transaksi.php">
-          <i class="bi bi-receipt"></i>
-          <span>Transaksi</span>
-        </a>
-      </li><!-- End Transaksi Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="transaksi.php">
+                    <i class="bi bi-receipt"></i>
+                    <span>Transaksi</span>
+                </a>
+            </li><!-- End Transaksi Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="laporan.php">
-          <i class="bi bi-layout-text-sidebar-reverse"></i>
-          <span>Laporan</span>
-        </a>
-      </li><!-- End Laporan Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="laporan.php">
+                    <i class="bi bi-file-earmark-bar-graph"></i>
+                    <span>Laporan</span>
+                </a>
+            </li><!-- End Laporan Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pengguna.php">
+                    <i class="bi bi-people"></i>
+                    <span>Pengguna</span>
+                </a>
+            </li><!-- End Pengguna Page Nav -->
+        </ul>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pengguna.php">
-          <i class="bi bi-person-fill"></i>
-          <span>Pengguna</span>
-        </a>
-      </li><!-- End Pengguna Page Nav -->
+    </aside><!-- End Sidebar-->
 
-    </ul>
-
-  </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
