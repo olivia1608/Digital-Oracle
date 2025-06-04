@@ -676,7 +676,7 @@ session_start();
                         <div class="row">
                             <!-- Begin Footer Logo Area -->
                             <div class="col-lg-4 col-md-6">
-                                <div class="footer-logo" style="color: #BE3144;">
+                                <div class="footer-logo">
                                     <h1>DigitalOracle</h1>
                                     <p class="info">
                                         Belanja elektronik jadi lebih mudah di DigitalOracle! Temukan smartphone, laptop, tablet, dan aksesori pilihan yang cocok untuk kebutuhan harian hingga profesional.
@@ -685,19 +685,18 @@ session_start();
                                 <ul class="des">
                                     <li>
                                         <span>Alamat: </span>
-                                        Jl. Digital Utama No. 21, Jakarta Pusat, DKI Jakarta 10110, Indonesia
+                                        Jl. Anggrek NO. 15 Kec.Kradenan Kab. Blora Jawa Tengah 58383
                                     </li>
                                     <li>
-                                        <span>Telepon: </span>
-                                        <a href="#">(+62) 811 2233 4455</a>
+                                        <span>TELEPON: </span>
+                                        <a href="#">(+62)831 3541 2239</a>
                                     </li>
                                     <li>
-                                        <span>Email: </span>
-                                        <a href="mailto:info@digitaloracle.id">info@digitaloracle.id</a>
+                                        <span>EMAIL: </span>
+                                        <a href="mailto://info@digitaloracle.com">info@digitaloracle.com</a>
                                     </li>
                                 </ul>
                             </div>
-
                             <!-- Footer Logo Area End Here -->
                             <!-- Begin Footer Block Area -->
                             <div class="col-lg-2 col-md-3 col-sm-6">

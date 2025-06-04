@@ -68,92 +68,13 @@
                         <!-- Header Logo Area End Here -->
                         <!-- Begin Header Middle Right Area -->
                         <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
-                            <!-- Begin Header Middle Searchbox Area -->
-                            <form action="#" class="hm-searchbox">
-                                <select class="nice-select select-search-category">
-                                    <option value="0">All</option>
-                                    <option value="10">Laptops</option>
-                                    <option value="17">- - Prime Video</option>
-                                    <option value="20">- - - - All Videos</option>
-                                    <option value="21">- - - - Blouses</option>
-                                    <option value="22">- - - - Evening Dresses</option>
-                                    <option value="23">- - - - Summer Dresses</option>
-                                    <option value="24">- - - - T-shirts</option>
-                                    <option value="25">- - - - Rent or Buy</option>
-                                    <option value="26">- - - - Your Watchlist</option>
-                                    <option value="27">- - - - Watch Anywhere</option>
-                                    <option value="28">- - - - Getting Started</option>
-                                    <option value="18">- - - - Computers</option>
-                                    <option value="29">- - - - More to Explore</option>
-                                    <option value="30">- - - - TV &amp; Video</option>
-                                    <option value="31">- - - - Audio &amp; Theater</option>
-                                    <option value="32">- - - - Camera, Photo </option>
-                                    <option value="33">- - - - Cell Phones</option>
-                                    <option value="34">- - - - Headphones</option>
-                                    <option value="35">- - - - Video Games</option>
-                                    <option value="36">- - - - Wireless Speakers</option>
-                                    <option value="19">- - - - Electronics</option>
-                                    <option value="37">- - - - Amazon Home</option>
-                                    <option value="38">- - - - Kitchen &amp; Dining</option>
-                                    <option value="39">- - - - Furniture</option>
-                                    <option value="40">- - - - Bed &amp; Bath</option>
-                                    <option value="41">- - - - Appliances</option>
-                                    <option value="11">TV &amp; Audio</option>
-                                    <option value="42">- - Chamcham</option>
-                                    <option value="45">- - - - Office</option>
-                                    <option value="47">- - - - Gaming</option>
-                                    <option value="48">- - - - Chromebook</option>
-                                    <option value="49">- - - - Refurbished</option>
-                                    <option value="50">- - - - Touchscreen</option>
-                                    <option value="51">- - - - Ultrabooks</option>
-                                    <option value="52">- - - - Blouses</option>
-                                    <option value="43">- - Sanai</option>
-                                    <option value="53">- - - - Hard Drives</option>
-                                    <option value="54">- - - - Graphic Cards</option>
-                                    <option value="55">- - - - Processors (CPU)</option>
-                                    <option value="56">- - - - Memory</option>
-                                    <option value="57">- - - - Motherboards</option>
-                                    <option value="58">- - - - Fans &amp; Cooling</option>
-                                    <option value="59">- - - - CD/DVD Drives</option>
-                                    <option value="44">- - Meito</option>
-                                    <option value="60">- - - - Sound Cards</option>
-                                    <option value="61">- - - - Cases &amp; Towers</option>
-                                    <option value="62">- - - - Casual Dresses</option>
-                                    <option value="63">- - - - Evening Dresses</option>
-                                    <option value="64">- - - - T-shirts</option>
-                                    <option value="65">- - - - Tops</option>
-                                    <option value="12">Smartphone</option>
-                                    <option value="66">- - Camera Accessories</option>
-                                    <option value="68">- - - - Octa Core</option>
-                                    <option value="69">- - - - Quad Core</option>
-                                    <option value="70">- - - - Dual Core</option>
-                                    <option value="71">- - - - 7.0 Screen</option>
-                                    <option value="72">- - - - 9.0 Screen</option>
-                                    <option value="73">- - - - Bags &amp; Cases</option>
-                                    <option value="67">- - XailStation</option>
-                                    <option value="74">- - - - Batteries</option>
-                                    <option value="75">- - - - Microphones</option>
-                                    <option value="76">- - - - Stabilizers</option>
-                                    <option value="77">- - - - Video Tapes</option>
-                                    <option value="78">- - - - Memory Card Readers</option>
-                                    <option value="79">- - - - Tripods</option>
-                                    <option value="13">Cameras</option>
-                                    <option value="14">headphone</option>
-                                    <option value="15">Smartwatch</option>
-                                    <option value="16">Accessories</option>
-                                </select>
-                                <input type="text" placeholder="Enter your search key ...">
-                                <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                            <!-- Header Middle Searchbox Area End Here -->
                             <!-- Begin Header Middle Right Area -->
                             <div class="header-middle-right">
                                 <ul class="hm-menu">
                                     <!-- Begin Header Middle Wishlist Area -->
                                     <li class="hm-wishlist">
                                         <a href="wishlist.html">
-                                            <span class="cart-item-count wishlist-item-count">0</span>
-                                            <i class="fa fa-heart-o"></i>
+                                            <i class="fa fa-user"></i>
                                         </a>
                                     </li>
                                     <!-- Header Middle Wishlist Area End Here -->
@@ -223,125 +144,9 @@
                             <div class="hb-menu">
                                 <nav>
                                     <ul>
-                                        <li class="dropdown-holder"><a href="index.html">Home</a>
-                                            <ul class="hb-dropdown">
-                                                <li class="active"><a href="index.html">Home One</a></li>
-                                                <li><a href="index-2.html">Home Two</a></li>
-                                                <li><a href="index-3.html">Home Three</a></li>
-                                                <li><a href="index-4.html">Home Four</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="megamenu-holder"><a href="shop-left-sidebar.html">Shop</a>
-                                            <ul class="megamenu hb-megamenu">
-                                                <li><a href="shop-left-sidebar.html">Shop Page Layout</a>
-                                                    <ul>
-                                                        <li><a href="shop-3-column.html">Shop 3 Column</a></li>
-                                                        <li><a href="shop-4-column.html">Shop 4 Column</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                                                        <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                                        <li><a href="shop-list.html">Shop List</a></li>
-                                                        <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a></li>
-                                                        <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="single-product-gallery-left.html">Single Product Style</a>
-                                                    <ul>
-                                                        <li><a href="single-product-carousel.html">Single Product Carousel</a></li>
-                                                        <li><a href="single-product-gallery-left.html">Single Product Gallery Left</a></li>
-                                                        <li><a href="single-product-gallery-right.html">Single Product Gallery Right</a></li>
-                                                        <li><a href="single-product-tab-style-top.html">Single Product Tab Style Top</a></li>
-                                                        <li><a href="single-product-tab-style-left.html">Single Product Tab Style Left</a></li>
-                                                        <li><a href="single-product-tab-style-right.html">Single Product Tab Style Right</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="single-product.html">Single Products</a>
-                                                    <ul>
-                                                        <li><a href="single-product.html">Single Product</a></li>
-                                                        <li><a href="single-product-sale.html">Single Product Sale</a></li>
-                                                        <li><a href="single-product-group.html">Single Product Group</a></li>
-                                                        <li><a href="single-product-normal.html">Single Product Normal</a></li>
-                                                        <li><a href="single-product-affiliate.html">Single Product Affiliate</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown-holder"><a href="blog-left-sidebar.html">Blog</a>
-                                            <ul class="hb-dropdown">
-                                                <li class="sub-dropdown-holder"><a href="blog-left-sidebar.html">Blog Grid View</a>
-                                                    <ul class="hb-dropdown hb-sub-dropdown">
-                                                        <li><a href="blog-2-column.html">Blog 2 Column</a></li>
-                                                        <li><a href="blog-3-column.html">Blog 3 Column</a></li>
-                                                        <li><a href="blog-left-sidebar.html">Grid Left Sidebar</a></li>
-                                                        <li><a href="blog-right-sidebar.html">Grid Right Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="sub-dropdown-holder"><a href="blog-list-left-sidebar.html">Blog List View</a>
-                                                    <ul class="hb-dropdown hb-sub-dropdown">
-                                                        <li><a href="blog-list.html">Blog List</a></li>
-                                                        <li><a href="blog-list-left-sidebar.html">List Left Sidebar</a></li>
-                                                        <li><a href="blog-list-right-sidebar.html">List Right Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="sub-dropdown-holder"><a href="blog-details-left-sidebar.html">Blog Details</a>
-                                                    <ul class="hb-dropdown hb-sub-dropdown">
-                                                        <li><a href="blog-details-left-sidebar.html">Left Sidebar</a></li>
-                                                        <li><a href="blog-details-right-sidebar.html">Right Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="sub-dropdown-holder"><a href="blog-gallery-format.html">Blog Format</a>
-                                                    <ul class="hb-dropdown hb-sub-dropdown">
-                                                        <li><a href="blog-audio-format.html">Blog Audio Format</a></li>
-                                                        <li><a href="blog-video-format.html">Blog Video Format</a></li>
-                                                        <li><a href="blog-gallery-format.html">Blog Gallery Format</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="megamenu-static-holder"><a href="index.html">Pages</a>
-                                            <ul class="megamenu hb-megamenu">
-                                                <li><a href="blog-left-sidebar.html">Blog Layouts</a>
-                                                    <ul>
-                                                        <li><a href="blog-2-column.html">Blog 2 Column</a></li>
-                                                        <li><a href="blog-3-column.html">Blog 3 Column</a></li>
-                                                        <li><a href="blog-left-sidebar.html">Grid Left Sidebar</a></li>
-                                                        <li><a href="blog-right-sidebar.html">Grid Right Sidebar</a></li>
-                                                        <li><a href="blog-list.html">Blog List</a></li>
-                                                        <li><a href="blog-list-left-sidebar.html">List Left Sidebar</a></li>
-                                                        <li><a href="blog-list-right-sidebar.html">List Right Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="blog-details-left-sidebar.html">Blog Details Pages</a>
-                                                    <ul>
-                                                        <li><a href="blog-details-left-sidebar.html">Left Sidebar</a></li>
-                                                        <li><a href="blog-details-right-sidebar.html">Right Sidebar</a></li>
-                                                        <li><a href="blog-audio-format.html">Blog Audio Format</a></li>
-                                                        <li><a href="blog-video-format.html">Blog Video Format</a></li>
-                                                        <li><a href="blog-gallery-format.html">Blog Gallery Format</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="index.html">Other Pages</a>
-                                                    <ul>
-                                                        <li><a href="login-register.html">My Account</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                        <li><a href="compare.html">Compare</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                                        <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="index.html">Other Pages 2</a>
-                                                    <ul>
-                                                        <li><a href="contact.html">Contact</a></li>
-                                                        <li><a href="about-us.html">About Us</a></li>
-                                                        <li><a href="faq.html">FAQ</a></li>
-                                                        <li><a href="404.html">404 Error</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="shop-left-sidebar.html">Smartwatch</a></li>
-                                        <li><a href="shop-left-sidebar.html">Accessories</a></li>
+                                        <li><a href="index.php">Beranda</a></li>
+                                        <li><a href="belanja.php">Belanja</a></li>
+                                        <li><a href="contact.php">Hubungi Kami</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -375,11 +180,11 @@
                                 <div class="single-slide align-center-left  animation-style-01 bg-1">
                                     <div class="slider-progress"></div>
                                     <div class="slider-content">
-                                        <h5>Sale Offer <span>-20% Off</span> This Week</h5>
-                                        <h2>Chamcham Galaxy S9 | S9+</h2>
-                                        <h3>Starting at <span>$1209.00</span></h3>
+                                        <h5>Promo Bulanan <span>-20% </span> Diskon</h5>
+                                        <h2>Samsung Galaxy S9+</h2>
+                                        <h3>Mulai dari <span>Rp10.000.000</span></h3>
                                         <div class="default-btn slide-btn">
-                                            <a class="links" href="shop-left-sidebar.html">Shopping Now</a>
+                                            <a class="links" href="shop-left-sidebar.html">Belanja Sekarang</a>
                                         </div>
                                     </div>
                                 </div>
@@ -388,11 +193,11 @@
                                 <div class="single-slide align-center-left animation-style-02 bg-2">
                                     <div class="slider-progress"></div>
                                     <div class="slider-content">
-                                        <h5>Sale Offer <span>Black Friday</span> This Week</h5>
-                                        <h2>Work Desk Surface Studio 2018</h2>
-                                        <h3>Starting at <span>$824.00</span></h3>
+                                        <h5>Promo Spesial</h5>
+                                        <h2>Microsoft Surface Studio</h2>
+                                        <h3>Mulai dari <span>Rp35.000.000</span></h3>
                                         <div class="default-btn slide-btn">
-                                            <a class="links" href="shop-left-sidebar.html">Shopping Now</a>
+                                            <a class="links" href="shop-left-sidebar.html">Belanja Sekarang</a>
                                         </div>
                                     </div>
                                 </div>
@@ -401,11 +206,11 @@
                                 <div class="single-slide align-center-left animation-style-01 bg-3">
                                     <div class="slider-progress"></div>
                                     <div class="slider-content">
-                                        <h5>Sale Offer <span>-10% Off</span> This Week</h5>
-                                        <h2>Phantom 4 Pro+ Obsidian</h2>
-                                        <h3>Starting at <span>$1849.00</span></h3>
+                                        <h5>Promo Bulanan <span>-15% </span> Diskon</h5>
+                                        <h2>Drone DJI Phantom 4 Pro</h2>
+                                        <h3>Mulai dari <span>Rp25.000.000</span></h3>
                                         <div class="default-btn slide-btn">
-                                            <a class="links" href="shop-left-sidebar.html">Shopping Now</a>
+                                            <a class="links" href="shop-left-sidebar.html">Belanja Sekarang</a>
                                         </div>
                                     </div>
                                 </div>
@@ -451,47 +256,52 @@
                     <div id="li-new-product" class="tab-pane active show" role="tabpanel">
                         <div class="row">
                             <div class="product-active owl-carousel">
-                                <div class="col-lg-12">
-                                    <!-- single-product-wrap start -->
-                                    <div class="single-product-wrap">
-                                        <div class="product-image">
-                                            <a href="single-product.html">
-                                                <img src="images/product/large-size/1.jpg" alt="Li's Product Image">
-                                            </a>
-                                            <span class="sticker">New</span>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="product_desc_info">
-                                                <div class="product-review">
-                                                    <h5 class="manufacturer">
-                                                        <a href="shop-left-sidebar.html">Graphic Corner</a>
-                                                    </h5>
-                                                    <div class="rating-box">
-                                                        <ul class="rating">
-                                                            <li><i class="fa fa-star-o"></i></li>
-                                                            <li><i class="fa fa-star-o"></i></li>
-                                                            <li><i class="fa fa-star-o"></i></li>
-                                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        </ul>
+                                <?php
+                                include "admin/koneksi.php"; // Pastikan file koneksi sudah sesuai
+
+                                $query = mysqli_query($koneksi, "
+    SELECT p.*, k.nm_kategori
+    FROM tb_produk p
+    JOIN tb_kategori k ON p.id_kategori = k.id_kategori
+    ORDER BY RAND() LIMIT 5
+");
+
+                                while ($data = mysqli_fetch_assoc($query)) {
+                                ?>
+                                    <div class="col-lg-12">
+                                        <!-- single-product-wrap start -->
+                                        <div class="single-product-wrap">
+                                            <div class="product-image">
+                                                <a href="detail_produk.php?id=<?php echo $data['id_produk']; ?>">
+                                                    <img src="admin/produk_img/<?php echo $data['gambar']; ?>" alt="<?php echo $data['nm_produk']; ?>" width="300" height="300">
+                                                </a>
+                                            </div>
+                                            <div class="product_desc">
+                                                <div class="product_desc_info">
+                                                    <div class="product-review">
+                                                        <h5 class="manufacturer">
+                                                            <a href="#"><?php echo strtoupper($data['nm_kategori']); ?>
+                                                            </a>
+                                                        </h5>
+                                                    </div>
+                                                    <h4><a class="product_name" href="detail_produk.php?id=<?php echo $data['id_produk']; ?>">
+                                                            <?php echo $data['nm_produk']; ?>
+                                                        </a></h4>
+                                                    <div class="price-box">
+                                                        <span class="new-price">Rp<?php echo number_format($data['harga'], 0, ',', '.'); ?></span>
                                                     </div>
                                                 </div>
-                                                <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a></h4>
-                                                <div class="price-box">
-                                                    <span class="new-price">$46.80</span>
+                                                <div class="add-actions">
+                                                    <ul class="add-actions-link">
+                                                        <li class="add-cart active"><a href="detail_produk.php?id=<?php echo $data['id_produk']; ?>">Beli Sekarang</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <div class="add-actions">
-                                                <ul class="add-actions-link">
-                                                    <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                    <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
-                                                    <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                </ul>
-                                            </div>
                                         </div>
+                                        <!-- single-product-wrap end -->
                                     </div>
-                                    <!-- single-product-wrap end -->
-                                </div>
+                                <?php } ?>
+
                                 <div class="col-lg-12">
                                     <!-- single-product-wrap start -->
                                     <div class="single-product-wrap">
@@ -1827,15 +1637,15 @@
                         <!-- Li's Static Home Image Area End Here -->
                         <!-- Begin Li's Static Home Content Area -->
                         <div class="li-static-home-content">
-                            <p>Sale Offer<span>-20% Off</span>This Week</p>
-                            <h2>Featured Product</h2>
-                            <h2>Meito Accessories 2018</h2>
+                            <p>Promo Bulanan <span>-20% Diskon </span>Produk Pilihan</p>
+                            <h2>Produk Unggulan dan Terbaru</h2>
+                            <h2>Smartphone & Aksesori DigitalOracle</h2>
                             <p class="schedule">
-                                Starting at
-                                <span> $1209.00</span>
+                                Mulai dari
+                                <span> Rp2.000.000</span>
                             </p>
                             <div class="default-btn">
-                                <a href="shop-left-sidebar.html" class="links">Shopping Now</a>
+                                <a href="shop-left-sidebar.html" class="links">Belanja Sekarang</a>
                             </div>
                         </div>
                         <!-- Li's Static Home Content Area End Here -->
@@ -3002,43 +2812,25 @@
                                 <ul class="des">
                                     <li>
                                         <span>Alamat: </span>
-                                        Jl. Digital Utama No. 21, Jakarta Pusat, DKI Jakarta 10110, Indonesia
+                                        Jl. Anggrek NO. 15 Kec.Kradenan Kab. Blora Jawa Tengah 58383
                                     </li>
                                     <li>
-                                        <span>Telepon: </span>
-                                        <a href="#">(+62) 811 2233 4455</a>
+                                        <span>TELEPON: </span>
+                                        <a href="#">(+62)831 3541 2239</a>
                                     </li>
                                     <li>
-                                        <span>Email: </span>
-                                        <a href="mailto:info@digitaloracle.id">info@digitaloracle.id</a>
+                                        <span>EMAIL: </span>
+                                        <a href="mailto://info@digitaloracle.com">info@digitaloracle.com</a>
                                     </li>
                                 </ul>
                             </div>
                             <!-- Footer Logo Area End Here -->
                             <!-- Begin Footer Block Area -->
                             <div class="col-lg-2 col-md-3 col-sm-6">
-                                <div class="footer-block">
-                                    <h3 class="footer-block-title">Product</h3>
-                                    <ul>
-                                        <li><a href="#">Prices drop</a></li>
-                                        <li><a href="#">New products</a></li>
-                                        <li><a href="#">Best sales</a></li>
-                                        <li><a href="#">Contact us</a></li>
-                                    </ul>
-                                </div>
                             </div>
                             <!-- Footer Block Area End Here -->
                             <!-- Begin Footer Block Area -->
                             <div class="col-lg-2 col-md-3 col-sm-6">
-                                <div class="footer-block">
-                                    <h3 class="footer-block-title">Our company</h3>
-                                    <ul>
-                                        <li><a href="#">Delivery</a></li>
-                                        <li><a href="#">Legal Notice</a></li>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Contact us</a></li>
-                                    </ul>
-                                </div>
                             </div>
                             <!-- Footer Block Area End Here -->
                             <!-- Begin Footer Block Area -->
@@ -3046,16 +2838,6 @@
                                 <div class="footer-block">
                                     <h3 class="footer-block-title">Follow Us</h3>
                                     <ul class="social-link">
-                                        <li class="twitter">
-                                            <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="rss">
-                                            <a href="https://rss.com/" data-toggle="tooltip" target="_blank" title="RSS">
-                                                <i class="fa fa-rss"></i>
-                                            </a>
-                                        </li>
                                         <li class="google-plus">
                                             <a href="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google Plus">
                                                 <i class="fa fa-google-plus"></i>
@@ -3078,19 +2860,6 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- Begin Footer Newsletter Area -->
-                                <div class="footer-newsletter">
-                                    <h4>Sign up to newsletter</h4>
-                                    <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="footer-subscribe-form validate" target="_blank" novalidate>
-                                        <div id="mc_embed_signup_scroll">
-                                            <div id="mc-form" class="mc-form subscribe-form form-group">
-                                                <input id="mc-email" type="email" autocomplete="off" placeholder="Enter your email" />
-                                                <button class="btn" id="mc-submit">Subscribe</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- Footer Newsletter Area End Here -->
                             </div>
                             <!-- Footer Block Area End Here -->
                         </div>
@@ -3103,31 +2872,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <!-- Begin Footer Links Area -->
-                            <div class="footer-links">
-                                <ul>
-                                    <li><a href="#">Online Shopping</a></li>
-                                    <li><a href="#">Promotions</a></li>
-                                    <li><a href="#">My Orders</a></li>
-                                    <li><a href="#">Help</a></li>
-                                    <li><a href="#">Customer Service</a></li>
-                                    <li><a href="#">Support</a></li>
-                                    <li><a href="#">Most Populars</a></li>
-                                    <li><a href="#">New Arrivals</a></li>
-                                    <li><a href="#">Special Products</a></li>
-                                    <li><a href="#">Manufacturers</a></li>
-                                    <li><a href="#">Our Stores</a></li>
-                                    <li><a href="#">Shipping</a></li>
-                                    <li><a href="#">Payments</a></li>
-                                    <li><a href="#">Warantee</a></li>
-                                    <li><a href="#">Refunds</a></li>
-                                    <li><a href="#">Checkout</a></li>
-                                    <li><a href="#">Discount</a></li>
-                                    <li><a href="#">Refunds</a></li>
-                                    <li><a href="#">Policy Shipping</a></li>
-                                </ul>
-                            </div>
-                            <!-- Footer Links Area End Here -->
                             <!-- Begin Footer Payment Area -->
                             <div class="copyright text-center">
                                 <a href="#">

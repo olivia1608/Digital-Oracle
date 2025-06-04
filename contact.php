@@ -145,9 +145,9 @@
                             <div class="hb-menu">
                                 <nav>
                                     <ul>
-                                        <li><a href="index.php">BERANDA</a></li>
-                                        <li><a href="belanja.php">BELANJA</a></li>
-                                        <li><a href="contact.php">HUBUNGI KAMI</a></li>
+                                        <li><a href="index.php">Beranda</a></li>
+                                        <li><a href="belanja.php">Belanja</a></li>
+                                        <li><a href="contact.php">Hubungi Kami</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -184,8 +184,12 @@
         <!-- Begin Contact Main Page Area -->
         <div class="contact-main-page mt-60 mb-40 mb-md-40 mb-sm-40 mb-xs-40">
             <div class="container mb-60">
-                <div id="google-map"></div>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.973730217066!2d111.58744367424643!3d-7.129035169917676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e776411abeabb93%3A0x3ccba806cf9ef497!2sSekolah%20Tinggi%20Teknologi%20Ronggolawe!5e0!3m2!1sen!2sid!4v1746959940264!5m2!1sen!2sid"
+                        width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-dowgrade"></iframe>
+                </div>
             </div>
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2">
