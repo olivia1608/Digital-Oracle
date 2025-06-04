@@ -4,17 +4,17 @@ include "koneksi.php";
 
 // Cek apakah sudah login
 if (!isset($_SESSION["login"])) {
-    header("Location: login.php");
-    exit;
+  header("Location: login.php");
+  exit;
 }
 
 // Cek apakah status tersedia dan pastikan user adalah admin
 if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
-    echo "<script>
+  echo "<script>
     alert('Akses ditolak! Halaman ini hanya untuk Admin.');
     window.location.href='login.php';
   </script>";
-    exit;
+  exit;
 }
 ?>
 <!DOCTYPE html>
@@ -109,60 +109,60 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
   </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar">
 
-        <ul class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">
-                    <i class="bi bi-house-door"></i>
-                    <span>Beranda</span>
-                </a>
-            </li><!-- End Beranda Nav -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.php">
+          <i class="bi bi-house-door"></i>
+          <span>Beranda</span>
+        </a>
+      </li><!-- End Beranda Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="kategori.php">
-                    <i class="bi bi-tags"></i>
-                    <span>Kategori Produk</span>
-                </a>
-            </li><!-- End Kategori Produk Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="kategori.php">
+          <i class="bi bi-tags"></i>
+          <span>Kategori Produk</span>
+        </a>
+      </li><!-- End Kategori Produk Page Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="produk.php">
-                    <i class="bi bi-shop"></i>
-                    <span>Produk</span>
-                </a>
-            </li><!-- End Produk Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="produk.php">
+          <i class="bi bi-shop"></i>
+          <span>Produk</span>
+        </a>
+      </li><!-- End Produk Page Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="keranjang.php">
-                    <i class="bi bi-cart"></i>
-                    <span>Keranjang</span>
-                </a>
-            </li><!-- End Keranjang Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="keranjang.php">
+          <i class="bi bi-cart"></i>
+          <span>Keranjang</span>
+        </a>
+      </li><!-- End Keranjang Page Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="transaksi.php">
-                    <i class="bi bi-receipt"></i>
-                    <span>Transaksi</span>
-                </a>
-            </li><!-- End Transaksi Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="transaksi.php">
+          <i class="bi bi-receipt"></i>
+          <span>Transaksi</span>
+        </a>
+      </li><!-- End Transaksi Page Nav -->
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="laporan.php">
-                    <i class="bi bi-file-earmark-bar-graph"></i>
-                    <span>Laporan</span>
-                </a>
-            </li><!-- End Laporan Page Nav -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pengguna.php">
-                    <i class="bi bi-people"></i>
-                    <span>Pengguna</span>
-                </a>
-            </li><!-- End Pengguna Page Nav -->
-        </ul>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="laporan.php">
+          <i class="bi bi-file-earmark-bar-graph"></i>
+          <span>Laporan</span>
+        </a>
+      </li><!-- End Laporan Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pengguna.php">
+          <i class="bi bi-people"></i>
+          <span>Pengguna</span>
+        </a>
+      </li><!-- End Pengguna Page Nav -->
+    </ul>
 
-    </aside><!-- End Sidebar-->
+  </aside><!-- End Sidebar-->
 
 
   <main id="main" class="main">
@@ -194,6 +194,18 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
               </div>
             </div>
             <!-- End Welcome Card -->
+
+            <?php
+            // Koneksi ke database
+            include 'koneksi.php'; // Sesuaikan dengan file koneksi yang kamu gunakan
+
+            // Ambil total jumlah pesanan dari tabel tb_pesanan
+            $query = "SELECT COUNT(*) AS total_pesanan FROM tb_jual";
+            $result = mysqli_query($koneksi, $query);
+            $data = mysqli_fetch_assoc($result);
+            $totalPesanan = $data['total_pesanan'] ?? 0; // Default ke 0 jika tidak ada pesanan
+            ?>
+
             <!-- Orders Card -->
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
@@ -205,13 +217,29 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                       <i class="bi bi-basket"></i> <!-- Ikon keranjang belanja -->
                     </div>
                     <div class="ps-3">
-                      <h6>0</h6>
+                      <h6><?php echo $totalPesanan; ?></h6>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- End Orders Card -->
+
+            <!-- Revenue Card -->
+            <?php
+            include 'koneksi.php';
+
+            // Ambil tanggal hari ini
+            $tanggalHariIni = date("Y-m-d");
+
+            // Query langsung ke tb_jual berdasarkan tanggal hari ini
+            $query = "SELECT SUM(total) AS total_revenue FROM tb_jual WHERE DATE(tgl_jual) = '$tanggalHariIni'";
+
+            $result = mysqli_query($koneksi, $query);
+            $data = mysqli_fetch_assoc($result);
+            $totalRevenue = $data['total_revenue'] ?? 0;
+            ?>
+
             <!-- Revenue Card -->
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card revenue-card">
@@ -223,7 +251,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>Rp. 0</h6>
+                      <h6>Rp<?php echo number_format($totalRevenue, 0, ',', '.'); ?></h6>
                     </div>
                   </div>
                 </div>
