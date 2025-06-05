@@ -1662,7 +1662,7 @@
                     <div class="col-lg-12">
                         <div class="li-product-tab li-trending-product-tab">
                             <h2>
-                                <span>Trendding Products</span>
+                                <span>Produk Kami</span>
                             </h2>
                             <ul class="nav li-product-menu li-trending-product-menu">
                                 <li><a class="active" data-toggle="tab" href="#home1"><span>Sanai</span></a></li>
@@ -2881,7 +2881,7 @@
                             <!-- Footer Payment Area End Here -->
                             <!-- Begin Copyright Area -->
                             <div class="copyright text-center pt-25">
-                                <span><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
+                                <span><a target="_blank" href="https://www.instagram.com/olivia_chyn/">Designed by: OliviaCahyaniAgustina</a></span>
                             </div>
                             <!-- Copyright Area End Here -->
                         </div>
