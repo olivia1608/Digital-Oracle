@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -72,61 +75,128 @@
                             <!-- Begin Header Middle Right Area -->
                             <div class="header-middle-right">
                                 <ul class="hm-menu">
-                                    <!-- Begin Header Middle Wishlist Area -->
-                                    <li class="hm-wishlist">
-                                        <a href="wishlist.html">
-                                            <i class="fa fa-user"></i>
-                                        </a>
-                                    </li>
-                                    <!-- Header Middle Wishlist Area End Here -->
-                                    <!-- Begin Header Mini Cart Area -->
-                                    <li class="hm-minicart">
-                                        <div class="hm-minicart-trigger">
-                                            <span class="item-icon"></span>
-                                            <span class="item-text">£80.00
-                                                <span class="cart-item-count">2</span>
-                                            </span>
-                                        </div>
-                                        <span></span>
-                                        <div class="minicart">
-                                            <ul class="minicart-product-list">
-                                                <li>
-                                                    <a href="single-product.html" class="minicart-product-image">
-                                                        <img src="images/product/small-size/5.jpg" alt="cart products">
-                                                    </a>
-                                                    <div class="minicart-product-details">
-                                                        <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                        <span>£40 x 1</span>
-                                                    </div>
-                                                    <button class="close" title="Remove">
-                                                        <i class="fa fa-close"></i>
-                                                    </button>
+                                    <?php
+
+                                    if (!isset($_SESSION['id_user'])) {
+                                    ?>
+                                        <!-- Jika belum login -->
+                                        <li class="hm-wishlist">
+                                            <a href="login.php" title="Login">
+                                                <i class="fa fa-user"></i>
+                                            </a>
+                                        </li>
+                                    <?php
+                                    } else {
+                                        // Ambil nama user dari session atau database jika mau
+                                        $nama_user = $_SESSION['username']; // pastikan diset saat login
+
+                                    ?>
+                                        <!-- User Icon with Dropdown -->
+                                        <li class="hm-wishlist dropdown">
+                                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-user"></i>
+                                            </a>
+                                            <ul class="dropdown-menu" style="padding: 10px; min-width: 150px; text-align: center;">
+                                                <li style="padding: 5px 10px; font-weight: bold;">
+                                                    <?= htmlspecialchars($nama_user) ?>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product.html" class="minicart-product-image">
-                                                        <img src="images/product/small-size/6.jpg" alt="cart products">
+                                                    <hr style="margin: 5px 0;">
+                                                </li> <!-- Garis pembatas -->
+                                                <li>
+                                                    <a href="logout.php" style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+                                                        <i class="fa fa-sign-out"></i> Logout
                                                     </a>
-                                                    <div class="minicart-product-details">
-                                                        <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                        <span>£40 x 1</span>
-                                                    </div>
-                                                    <button class="close" title="Remove">
-                                                        <i class="fa fa-close"></i>
-                                                    </button>
                                                 </li>
                                             </ul>
-                                            <p class="minicart-total">SUBTOTAL: <span>Rp.0</span></p>
-                                            <div class="minicart-button">
-                                                <a href="shopping-cart.html" class="li-button li-button-fullwidth li-button-dark">
-                                                    <span>View Full Cart</span>
-                                                </a>
-                                                <a href="checkout.html" class="li-button li-button-fullwidth">
-                                                    <span>Checkout</span>
-                                                </a>
+                                        </li>
+
+                                        <!-- Mini Cart -->
+                                        <li class="hm-minicart">
+                                            <div class="hm-minicart-trigger">
+                                                <span class="item-icon"></span>
+
+                                                <?php
+                                                include 'admin/koneksi.php';
+
+                                                $username = $_SESSION['username'];
+                                                $query_user = mysqli_query($koneksi, "SELECT id_user FROM tb_user WHERE username ='$username'");
+                                                $data_user = mysqli_fetch_assoc($query_user);
+                                                $id_user = $data_user['id_user'];
+
+                                                $query_pesanan = mysqli_query($koneksi, "
+SELECT p.*, pr.nm_produk, pr.gambar, pr.harga
+FROM tb_pesanan p
+JOIN tb_produk pr ON p.id_produk = pr.id_produk
+WHERE p.id_user = '$id_user'
+");
+                                                $subtotal = 0;
+                                                $total_item = 0;
+                                                while ($row = mysqli_fetch_assoc($query_pesanan)) {
+                                                    $subtotal += $row['harga'] * $row['qty'];
+                                                    $total_item += $row['qty'];
+                                                }
+
+                                                // Hitung diskon
+                                                $diskon = 0;
+                                                if ($subtotal > 3000000) {
+                                                    $diskon = 0.07 * $subtotal;
+                                                } elseif ($subtotal > 1500000) {
+                                                    $diskon = 0.05 * $subtotal;
+                                                }
+
+                                                $total_bayar = $subtotal - $diskon;
+
+                                                echo "<span class='item-text'>Rp " . number_format($total_bayar, 0) . " <span class='cart-item-count'>" . $total_item . "</span></span>";
+                                                ?>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <!-- Header Mini Cart Area End Here -->
+
+                                            <span></span>
+
+                                            <div class="minicart">
+                                                <ul class="minicart-product-list">
+                                                    <?php
+                                                    mysqli_data_seek($query_pesanan, 0);
+                                                    if (mysqli_num_rows($query_pesanan) > 0) {
+                                                        while ($row = mysqli_fetch_assoc($query_pesanan)) {
+                                                    ?>
+                                                            <li>
+                                                                <a href="detail_produk.php?id=<?= $row['id_produk']; ?>" class="minicart-product-image">
+                                                                    <img src="admin/produk_img/<?= $row['gambar'] ?>" alt="cart product" width="70">
+                                                                </a>
+                                                                <div class="minicart-product-details">
+                                                                    <h6><a href="detail_produk.php?id=<?= $row['id_produk']; ?>"><?= $row['nm_produk']; ?></a></h6>
+                                                                    <span>Rp <?= number_format($row['harga'], 0); ?> x <?= $row['qty']; ?></span>
+                                                                </div>
+                                                                <form method="POST" action="hapus_pesanan.php?id=<?= $row['id_pesanan']; ?>" style="display:inline;">
+                                                                    <input type="hidden" name="id_pesanan" value="<?= $row['id_pesanan']; ?>">
+                                                                    <button class="close" type="submit"><i class="fa fa-close"></i></button>
+                                                                </form>
+                                                            </li>
+                                                    <?php
+                                                        }
+                                                    } else {
+                                                        echo "<li>Keranjang kosong.</li>";
+                                                    }
+                                                    ?>
+                                                </ul>
+
+                                                <p class="minicart-total">TOTAL BAYAR: <span>Rp <?= number_format($total_bayar, 0); ?></span></p>
+
+                                                <div class="minicart-button">
+                                                    <a href="cart.php" class="li-button li-button-dark li-button-fullwidth li-button-sm">
+                                                        <span>Lihat Keranjang</span>
+                                                    </a>
+                                                    <form method="POST" action="cart.php">
+                                                        <input type="hidden" name="checkout" value="1">
+                                                        <button type="submit" class="li-button li-button-fullwidth li-button-sm" style="border: none  !important;">
+                                                            <span>Checkout</span>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                             <!-- Header Middle Right Area End Here -->

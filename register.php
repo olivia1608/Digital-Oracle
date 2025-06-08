@@ -91,13 +91,6 @@ $data = mysqli_fetch_array($sql);
                             <!-- Begin Header Middle Right Area -->
                             <div class="header-middle-right">
                                 <ul class="hm-menu">
-                                    <!-- Begin Header Middle Wishlist Area -->
-                                    <li class="hm-wishlist">
-                                        <a href="wishlist.html">
-                                            <i class="fa fa-user"></i>
-                                        </a>
-                                    </li>
-                                    <!-- Header Middle Wishlist Area End Here -->
                                 </ul>
                             </div>
                             <!-- Header Middle Right Area End Here -->
