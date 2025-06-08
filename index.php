@@ -239,6 +239,17 @@ WHERE p.id_user = '$id_user'
             <!-- Mobile Menu Area End Here -->
         </header>
         <!-- Header Area End Here -->
+        <!-- Begin Li's Breadcrumb Area -->
+        <div class="breadcrumb-area">
+            <div class="container">
+                <div class="breadcrumb-content">
+                    <ul>
+                        <li class="active">Beranda</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Li's Breadcrumb Area End Here -->
         <!-- Begin Slider With Banner Area -->
         <div class="slider-with-banner">
             <div class="container">
@@ -549,7 +560,7 @@ WHERE p.id_user = '$id_user'
                             <!-- Begin Footer Block Area -->
                             <div class="col-lg-4">
                                 <div class="footer-block">
-                                    <h3 class="footer-block-title">Follow Us</h3>
+                                    <h3 class="footer-block-title">Ikuti Kami</h3>
                                     <ul class="social-link">
                                         <li class="instagram">
                                             <a href="https://www.instagram.com/" data-toggle="tooltip" target="_blank" title="Instagram">

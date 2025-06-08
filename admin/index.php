@@ -262,6 +262,12 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
             <!-- End Revenue Card -->
           </div>
         </div><!-- End Left side columns -->
+
+        <!-- Right side columns -->
+         <div class="col-lg-4">
+          
+         </div><!-- End Right side columns -->
+
       </div>
     </section>
 

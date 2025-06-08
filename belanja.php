@@ -845,8 +845,6 @@ WHERE p.id_user = '$id_user'
                                         <div class="product-additional-info pt-25">
                                             <div class="product-social-sharing pt-25">
                                                 <ul>
-                                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
                                                     <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
                                                 </ul>
                                             </div>

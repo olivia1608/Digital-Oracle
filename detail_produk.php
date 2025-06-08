@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -9,7 +10,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>detail_produk - DigitalOracle</title>
+    <title>Detail Produk - DigitalOracle</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -215,9 +216,9 @@ WHERE p.id_user = '$id_user'
                             <div class="hb-menu">
                                 <nav>
                                     <ul>
-                                        <li><a href="index.php">BERANDA</a></li>
-                                        <li><a href="belanja.php">BELANJA</a></li>
-                                        <li><a href="contact.php">HUBUNGI KAMI</a></li>
+                                        <li><a href="index.php">Beranda</a></li>
+                                        <li><a href="belanja.php">Belanja</a></li>
+                                        <li><a href="contact.php">Hubungi Kami</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -289,7 +290,7 @@ WHERE p.id_user = '$id_user'
 
                     <div class="col-lg-7 col-md-6">
                         <div class="product-details-view-content p-2">
-                            <div class="product-info"
+                            <div class="product-info">
                                 <h2><?= $data['nm_produk'] ?></h2>
                                 <span class="product-details-ref">Kategori: <?= $data['nm_kategori'] ?></span>
                                 <div class="price-box pt-20">
@@ -324,31 +325,9 @@ WHERE p.id_user = '$id_user'
                                 <div class="product-additional-info pt-25">
                                     <div class="product-social-sharing pt-25">
                                         <ul>
-                                            <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                                            <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
                                             <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div class="block-reassurance">
-                                    <ul>
-                                        <li>
-                                            <div class="reassurance-item">
-                                                <div class="reassurance-icon">
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="reassurance-item">
-                                                <div class="reassurance-icon">
-                                        </li>
-                                        <li>
-                                            <div class="reassurance-item">
-                                                <div class="reassurance-icon">
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -373,113 +352,7 @@ WHERE p.id_user = '$id_user'
                 <div class="tab-content">
                     <div id="description" class="tab-pane active show" role="tabpanel">
                         <div class="product-description">
-                            <span>testing</span>
-                        </div>
-                    </div>
-                    <div id="product-details" class="tab-pane" role="tabpanel">
-                        <div class="product-details-manufacturer">
-                            <a href="#">
-                                <img src="images/product-details/1.jpg" alt="Product Manufacturer Image">
-                            </a>
-                            <p><span>Reference</span> demo_7</p>
-                            <p><span>Reference</span> demo_7</p>
-                        </div>
-                    </div>
-                    <div id="reviews" class="tab-pane" role="tabpanel">
-                        <div class="product-reviews">
-                            <div class="product-details-comment-block">
-                                <div class="comment-review">
-                                    <span>Grade</span>
-                                    <ul class="rating">
-                                        <li><i class="fa fa-star-o"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
-                                        <li><i class="fa fa-star-o"></i></li>
-                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                        <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                    </ul>
-                                </div>
-                                <div class="comment-author-infos pt-25">
-                                    <span>HTML 5</span>
-                                    <em>01-12-18</em>
-                                </div>
-                                <div class="comment-details">
-                                    <h4 class="title-block">Demo</h4>
-                                    <p>Plaza</p>
-                                </div>
-                                <div class="review-btn">
-                                    <a class="review-links" href="#" data-toggle="modal" data-target="#mymodal">Write Your Review!</a>
-                                </div>
-                                <!-- Begin Quick View | Modal Area -->
-                                <div class="modal fade modal-wrapper" id="mymodal">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <h3 class="review-page-title">Write Your Review</h3>
-                                                <div class="modal-inner-area row">
-                                                    <div class="col-lg-6">
-                                                        <div class="li-review-product">
-                                                            <img src="images/product/large-size/3.jpg" alt="Li's Product">
-                                                            <div class="li-review-product-desc">
-                                                                <p class="li-product-name">Today is a good day Framed poster</p>
-                                                                <p>
-                                                                    <span>Beach Camera Exclusive Bundle - Includes Two Samsung Radiant 360 R3 Wi-Fi Bluetooth Speakers. Fill The Entire Room With Exquisite Sound via Ring Radiator Technology. Stream And Control R3 Speakers Wirelessly With Your Smartphone. Sophisticated, Modern Design </span>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="li-review-content">
-                                                            <!-- Begin Feedback Area -->
-                                                            <div class="feedback-area">
-                                                                <div class="feedback">
-                                                                    <h3 class="feedback-title">Our Feedback</h3>
-                                                                    <form action="#">
-                                                                        <p class="your-opinion">
-                                                                            <label>Your Rating</label>
-                                                                            <span>
-                                                                                <select class="star-rating">
-                                                                                    <option value="1">1</option>
-                                                                                    <option value="2">2</option>
-                                                                                    <option value="3">3</option>
-                                                                                    <option value="4">4</option>
-                                                                                    <option value="5">5</option>
-                                                                                </select>
-                                                                            </span>
-                                                                        </p>
-                                                                        <p class="feedback-form">
-                                                                            <label for="feedback">Your Review</label>
-                                                                            <textarea id="feedback" name="comment" cols="45" rows="8" aria-required="true"></textarea>
-                                                                        </p>
-                                                                        <div class="feedback-input">
-                                                                            <p class="feedback-form-author">
-                                                                                <label for="author">Name<span class="required">*</span>
-                                                                                </label>
-                                                                                <input id="author" name="author" value="" size="30" aria-required="true" type="text">
-                                                                            </p>
-                                                                            <p class="feedback-form-author feedback-form-email">
-                                                                                <label for="email">Email<span class="required">*</span>
-                                                                                </label>
-                                                                                <input id="email" name="email" value="" size="30" aria-required="true" type="text">
-                                                                                <span class="required"><sub>*</sub> Required fields</span>
-                                                                            </p>
-                                                                            <div class="feedback-btn pb-15">
-                                                                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">Close</a>
-                                                                                <a href="#">Submit</a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                            <!-- Feedback Area End Here -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Quick View | Modal Area End Here -->
-                            </div>
+                            <span><?= nl2br($data['desk']) ?></span>
                         </div>
                     </div>
                 </div>
@@ -510,7 +383,7 @@ WHERE p.id_user = '$id_user'
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="single-product.php?id_produk=<?= $p['id_produk'] ?>">
+                                                <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">
                                                     <img src="admin/product_img/<?= $p['gambar'] ?>" alt="<?= $p['nm_produk'] ?>" width="300" height="300">
                                                 </a>
                                             </div>
@@ -518,11 +391,11 @@ WHERE p.id_user = '$id_user'
                                                 <div class="product_desc_info">
                                                     <div class="product-review">
                                                         <h5 class="manufacturer">
-                                                            <a href="#"><?= $p['id_kategori'] ?>r</a> <!-- Bisa diganti nama kategori jika join -->
+                                                            <a href="#"><?= $p['id_kategori'] ?></a> <!-- Bisa diganti nama kategori jika join -->
                                                         </h5>
                                                     </div>
                                                     <h4>
-                                                        <a class="product_name" href="detail_produk.php? id_produk=<? $p['id_produk'] ?>">
+                                                        <a class="product_name" href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">
                                                             <?= $p['nm_produk'] ?>
                                                         </a>
                                                     </h4>
@@ -547,176 +420,6 @@ WHERE p.id_user = '$id_user'
                                         <!-- single-product-wrap end -->
                                     </div>
                                 <?php } ?>
-                                <div class="col-lg-12">
-                                    <!-- single-product-wrap start -->
-                                    <div class="single-product-wrap">
-                                        <div class="product-image">
-                                            <a href="single-product.html">
-                                                <img src="images/product/large-size/2.jpg" alt="Li's Product Image">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="product_desc_info">
-                                                <div class="product-review">
-                                                    <h5 class="manufacturer">
-                                                        <a href="product-details.html">Studio Design</a>
-                                                    </h5>
-                                                </div>
-                                                <h4><a class="product_name" href="single-product.html">Mug Today is a good day</a></h4>
-                                                <div class="price-box">
-                                                    <span class="new-price new-price-2">$71.80</span>
-                                                    <span class="old-price">$77.22</span>
-                                                    <span class="discount-percentage">-7%</span>
-                                                </div>
-                                            </div>
-                                            <div class="add-actions">
-                                                <ul class="add-actions-link">
-                                                    <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                    <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                    <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single-product-wrap end -->
-                                </div>
-                                <div class="col-lg-12">
-                                    <!-- single-product-wrap start -->
-                                    <div class="single-product-wrap">
-                                        <div class="product-image">
-                                            <a href="single-product.html">
-                                                <img src="images/product/large-size/3.jpg" alt="Li's Product Image">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="product_desc_info">
-                                                <div class="product-review">
-                                                    <h5 class="manufacturer">
-                                                        <a href="product-details.html">Graphic Corner</a>
-                                                    </h5>
-                                                </div>
-                                                <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a></h4>
-                                                <div class="price-box">
-                                                    <span class="new-price">$46.80</span>
-                                                </div>
-                                            </div>
-                                            <div class="add-actions">
-                                                <ul class="add-actions-link">
-                                                    <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                    <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                    <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single-product-wrap end -->
-                                </div>
-                                <div class="col-lg-12">
-                                    <!-- single-product-wrap start -->
-                                    <div class="single-product-wrap">
-                                        <div class="product-image">
-                                            <a href="single-product.html">
-                                                <img src="images/product/large-size/4.jpg" alt="Li's Product Image">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="product_desc_info">
-                                                <div class="product-review">
-                                                    <h5 class="manufacturer">
-                                                        <a href="product-details.html">Studio Design</a>
-                                                    </h5>
-                                                </div>
-                                                <h4><a class="product_name" href="single-product.html">Mug Today is a good day</a></h4>
-                                                <div class="price-box">
-                                                    <span class="new-price new-price-2">$71.80</span>
-                                                    <span class="old-price">$77.22</span>
-                                                    <span class="discount-percentage">-7%</span>
-                                                </div>
-                                            </div>
-                                            <div class="add-actions">
-                                                <ul class="add-actions-link">
-                                                    <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                    <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                    <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single-product-wrap end -->
-                                </div>
-                                <div class="col-lg-12">
-                                    <!-- single-product-wrap start -->
-                                    <div class="single-product-wrap">
-                                        <div class="product-image">
-                                            <a href="single-product.html">
-                                                <img src="images/product/large-size/5.jpg" alt="Li's Product Image">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="product_desc_info">
-                                                <div class="product-review">
-                                                    <h5 class="manufacturer">
-                                                        <a href="product-details.html">Graphic Corner</a>
-                                                    </h5>
-                                                </div>
-                                                <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a></h4>
-                                                <div class="price-box">
-                                                    <span class="new-price">$46.80</span>
-                                                </div>
-                                            </div>
-                                            <div class="add-actions">
-                                                <ul class="add-actions-link">
-                                                    <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                    <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                    <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single-product-wrap end -->
-                                </div>
-                                <div class="col-lg-12">
-                                    <!-- single-product-wrap start -->
-                                    <div class="single-product-wrap">
-                                        <div class="product-image">
-                                            <a href="single-product.html">
-                                                <img src="images/product/large-size/6.jpg" alt="Li's Product Image">
-                                            </a>
-                                        </div>
-                                        <div class="product_desc">
-                                            <div class="product_desc_info">
-                                                <div class="product-review">
-                                                    <h5 class="manufacturer">
-                                                        <a href="product-details.html">Studio Design</a>
-                                                    </h5>
-                                                    <div class="rating-box">
-                                                        <ul class="rating">
-                                                            <li><i class="fa fa-star-o"></i></li>
-                                                            <li><i class="fa fa-star-o"></i></li>
-                                                            <li><i class="fa fa-star-o"></i></li>
-                                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <h4><a class="product_name" href="single-product.html">Mug Today is a good day</a></h4>
-                                                <div class="price-box">
-                                                    <span class="new-price new-price-2">$71.80</span>
-                                                    <span class="old-price">$77.22</span>
-                                                    <span class="discount-percentage">-7%</span>
-                                                </div>
-                                            </div>
-                                            <div class="add-actions">
-                                                <ul class="add-actions-link">
-                                                    <li class="add-cart active"><a href="#">Add to cart</a></li>
-                                                    <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                    <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- single-product-wrap end -->
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -833,21 +536,6 @@ WHERE p.id_user = '$id_user'
                                 <div class="footer-block">
                                     <h3 class="footer-block-title">Ikuti Kami</h3>
                                     <ul class="social-link">
-                                        <li class="twitter">
-                                            <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="facebook">
-                                            <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank" title="Facebook">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="youtube">
-                                            <a href="https://www.youtube.com/" data-toggle="tooltip" target="_blank" title="Youtube">
-                                                <i class="fa fa-youtube"></i>
-                                            </a>
-                                        </li>
                                         <li class="instagram">
                                             <a href="https://www.instagram.com/" data-toggle="tooltip" target="_blank" title="Instagram">
                                                 <i class="fa fa-instagram"></i>
@@ -943,8 +631,6 @@ WHERE p.id_user = '$id_user'
                                         <div class="product-additional-info pt-25">
                                             <div class="product-social-sharing pt-25">
                                                 <ul>
-                                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
                                                     <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
                                                 </ul>
                                             </div>
