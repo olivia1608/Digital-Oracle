@@ -119,9 +119,9 @@ if (isset($_POST["login"])) {
                             <div class="hb-menu">
                                 <nav>
                                     <ul>
-                                        <li><a href="index.php">BERANDA</a></li>
-                                        <li><a href="belanja.php">BELANJA</a></li>
-                                        <li><a href="contact.php">HUBUNGI KAMI</a></li>
+                                        <li><a href="index.php">Beranda</a></li>
+                                        <li><a href="belanja.php">Belanja</a></li>
+                                        <li><a href="contact.php">Hubungi Kami</a></li>
                                     </ul>
                                 </nav>
                             </div>

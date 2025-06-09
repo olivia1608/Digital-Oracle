@@ -171,7 +171,6 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                 </ol>
             </nav>
         </div><!-- End Page Title -->
-
         <?php
         // Sertakan file koneksi
         include 'koneksi.php';
@@ -184,13 +183,13 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
         $kategori_filter = isset($_GET['kategori']) ? $_GET['kategori'] : "";
 
         // Query untuk mengambil data penjualan dengan filter kategori jika ada
-        $sql = "SELECT j.id_jual, u.username, j.tgl_jual, j.total, j.diskon
-        FROM tb_jual j
+        $sql = "SELECT j.id_jual, u.username, j.tgl_jual, j.total, j.diskon 
+        FROM tb_jual j 
         JOIN tb_user u ON j.id_user = u.id_user";
 
         if (!empty($kategori_filter)) {
             // Jika kategori dipilih, filter berdasarkan kategori yang terkait dengan produk dalam tb_jualdtl
-            $sql .= " JOIN tb_jualdtl jd ON j.id_jual = j.id_jual
+            $sql .= " JOIN tb_jualdtl jd ON j.id_jual = jd.id_jual
               JOIN tb_produk p ON jd.id_produk = p.id_produk
               WHERE p.id_kategori = '$kategori_filter'";
         }
@@ -204,7 +203,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                 <div class="card">
                     <div class="card-body">
                         <div class="filter-bar mt-3">
-                            <form class="filter-from d-flex align-items-center" method="GET" action="">
+                            <form class="filter-form d-flex align-items-center" method="GET" action="">
                                 <select name="kategori" class="form-select me-2" style="max-width: 200px;" title="Pilih kategori">
                                     <option value="">-- Semua Kategori --</option>
                                     <?php

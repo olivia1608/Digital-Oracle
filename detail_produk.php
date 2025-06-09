@@ -407,11 +407,6 @@ WHERE p.id_user = '$id_user'
                                                         <li class="add-cart active">
                                                             <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">Beli Sekarang</a>
                                                         </li>
-                                                        <li>
-                                                            <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>"title="Quick View" class="quick-view-btn">
-                                                                <i class="fa fa-eye"></i>
-                                                            </a>
-                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
