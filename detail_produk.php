@@ -325,7 +325,7 @@ WHERE p.id_user = '$id_user'
                                 <div class="product-additional-info pt-25">
                                     <div class="product-social-sharing pt-25">
                                         <ul>
-                                            <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                                            <li class="instagram"><a href="https://instagram.com/olivia_chyn/" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -405,7 +405,7 @@ WHERE p.id_user = '$id_user'
                                                 <div class="add-actions">
                                                     <ul class="add-actions-link">
                                                         <li class="add-cart active">
-                                                            <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">Beli Sekarang</a>
+                                                            <a href="detail_produk.php?id=<?= $p['id_produk'] ?>">Beli Sekarang</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -531,7 +531,7 @@ WHERE p.id_user = '$id_user'
                                     <h3 class="footer-block-title">Ikuti Kami</h3>
                                     <ul class="social-link">
                                         <li class="instagram">
-                                            <a href="https://www.instagram.com/" data-toggle="tooltip" target="_blank" title="Instagram">
+                                            <a href="https://instagram.com/olivia_chyn/" data-toggle="tooltip" target="_blank" title="Instagram">
                                                 <i class="fa fa-instagram"></i>
                                             </a>
                                         </li>
@@ -625,7 +625,7 @@ WHERE p.id_user = '$id_user'
                                         <div class="product-additional-info pt-25">
                                             <div class="product-social-sharing pt-25">
                                                 <ul>
-                                                    <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                                                    <li class="instagram"><a href="https://instagram.com/olivia_chyn/" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
                                                 </ul>
                                             </div>
                                         </div>

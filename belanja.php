@@ -749,7 +749,7 @@ WHERE p.id_user = '$id_user'
                                     <h3 class="footer-block-title">Ikuti Kami</h3>
                                     <ul class="social-link">
                                         <li class="instagram">
-                                            <a href="https://www.instagram.com/" data-toggle="tooltip" target="_blank" title="Instagram">
+                                            <a href="https://instagram.com/olivia_chyn/" data-toggle="tooltip" target="_blank" title="Instagram">
                                                 <i class="fa fa-instagram"></i>
                                             </a>
                                         </li>
@@ -778,7 +778,7 @@ WHERE p.id_user = '$id_user'
                             <!-- Footer Payment Area End Here -->
                             <!-- Begin Copyright Area -->
                             <div class="copyright text-center pt-25">
-                                <span><a target="_blank" href="https://www.instagram.com/olivia_chyn/">Designed by: OliviaCahyaniAgustina</a></span>
+                                <span><a target="_blank" href="https://instagram.com/olivia_chyn/">Designed by: OliviaCahyaniAgustina</a></span>
                             </div>
                             <!-- Copyright Area End Here -->
                         </div>
@@ -845,7 +845,7 @@ WHERE p.id_user = '$id_user'
                                         <div class="product-additional-info pt-25">
                                             <div class="product-social-sharing pt-25">
                                                 <ul>
-                                                    <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                                                    <li class="instagram"><a href="https://instagram.com/olivia_chyn/" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
                                                 </ul>
                                             </div>
                                         </div>

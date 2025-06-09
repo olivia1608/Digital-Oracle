@@ -25,7 +25,7 @@ if ($data && $data['stok'] >= $jumlah) {
     }
 
     $id_pesanan = 'M' . str_pad($newId, 3, '0', STR_PAD_LEFT);
-
+    
     $insert = mysqli_query($koneksi, "INSERT INTO tb_pesanan(id_pesanan, id_produk, qty, total, id_user) VALUES ('$id_pesanan', '$id_produk', $jumlah, $total, '$id_user')");
     
     if ($insert) {
