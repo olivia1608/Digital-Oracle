@@ -383,7 +383,7 @@ WHERE p.id_user = '$id_user'
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">
+                                                <a href="detail_produk.php?id=<?= $p['id_produk'] ?>">
                                                     <img src="admin/produk_img/<?= $p['gambar'] ?>" alt="<?= $p['nm_produk'] ?>" width="300" height="300">
                                                 </a>
                                             </div>
