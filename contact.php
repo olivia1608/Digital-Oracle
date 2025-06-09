@@ -265,7 +265,9 @@ WHERE p.id_user = '$id_user'
                     <div class="col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2">
                         <div class="contact-page-side-content">
                             <h3 class="contact-page-title">DigitalOracle</h3>
-                            <p class="contact-page-message mb-25">Digital Oracle adalah toko online yang menyediakan berbagai macam alat elektronik terbaru dengan harga terjangkau, mulai dari gadget, laptop, dan lain sebagainya.</p>
+                            <p class="contact-page-message mb-25">
+                                Belanja elektronik jadi lebih mudah di DigitalOracle! Temukan smartphone, laptop, tablet, dan aksesori pilihan yang cocok untuk kebutuhan harian hingga profesional.
+                            </p>
                             <div class="single-contact-block">
                                 <h4><i class="fa fa-fax"></i> Alamat</h4>
                                 <p>Jl. Anggrek NO. 15 Kec.Kradenan Kab. Blora Jawa Tengah 58383</p>

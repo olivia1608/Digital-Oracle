@@ -80,7 +80,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Olivia</h6>
+                            <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
                             <span>Admin</span>
                         </li>
                         <li>
@@ -91,7 +91,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
+                            <a class="dropdown-item d-flex align-items-center" href="logout.php">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Sign Out</span>
                             </a>
@@ -240,7 +240,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                             let option<?php echo $row['id_kategori']; ?> = document.createElement("option");
                             option<?php echo $row['id_kategori']; ?>.value = "<?php echo $row['id_kategori']; ?>";
                             option<?php echo $row['id_kategori']; ?>.textContent = "<?php echo $row['nm_kategori']; ?>";
-                            tipeLaporanSelect.appendChild(option<?php echo $row['id_kategori']; ?>);    
+                            tipeLaporanSelect.appendChild(option<?php echo $row['id_kategori']; ?>);
                         <?php endwhile; ?>
                     <?php endif; ?>
 

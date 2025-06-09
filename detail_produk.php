@@ -384,20 +384,19 @@ WHERE p.id_user = '$id_user'
                                         <div class="single-product-wrap">
                                             <div class="product-image">
                                                 <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">
-                                                    <img src="admin/product_img/<?= $p['gambar'] ?>" alt="<?= $p['nm_produk'] ?>" width="300" height="300">
+                                                    <img src="admin/produk_img/<?= $p['gambar'] ?>" alt="<?= $p['nm_produk'] ?>" width="300" height="300">
                                                 </a>
                                             </div>
                                             <div class="product_desc">
                                                 <div class="product_desc_info">
                                                     <div class="product-review">
                                                         <h5 class="manufacturer">
-                                                            <a href="#"><?= $p['id_kategori'] ?></a> <!-- Bisa diganti nama kategori jika join -->
+                                                            <a href="#"><?= $p['id_kategori'] ?></a>
                                                         </h5>
                                                     </div>
-                                                    <h4>
-                                                        <a class="product_name" href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">
+                                                    <h4><a class="product_name" href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">
                                                             <?= $p['nm_produk'] ?>
-                                                        </a>
+                                                    </a>
                                                     </h4>
                                                     <div class="price-box">
                                                         <span class="new-price">Rp<?= number_format($p['harga'], 0, ',', '.') ?></span>
@@ -409,7 +408,7 @@ WHERE p.id_user = '$id_user'
                                                             <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>">Beli Sekarang</a>
                                                         </li>
                                                         <li>
-                                                            <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>" title="Quick View" class="quick-view-btn">
+                                                            <a href="detail_produk.php?id_produk=<?= $p['id_produk'] ?>"title="Quick View" class="quick-view-btn">
                                                                 <i class="fa fa-eye"></i>
                                                             </a>
                                                         </li>

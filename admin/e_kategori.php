@@ -100,15 +100,18 @@ if (isset($_POST["simpan"])) {
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Olivia</h6>
+                            <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
                             <span>Admin</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
+                            <a class="dropdown-item d-flex align-items-center" href="logout.php">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Sign Out</span>
                             </a>
@@ -204,7 +207,7 @@ if (isset($_POST["simpan"])) {
                                         class="form-label">Nama Kategori</label>
                                     <input type="text" class="form-control"
                                         id="nm_kategorii" name="nm_kategori"
-                                        placeholder="Masukkan Nama Kategori Produk" value="<?php echo $data['nm_kategori'];?>">
+                                        placeholder="Masukkan Nama Kategori Produk" value="<?php echo $data['nm_kategori']; ?>">
                                 </div>
                                 <div class="text-center">
                                     <button type="reset" class="btn btn-secondary">Reset</button>
