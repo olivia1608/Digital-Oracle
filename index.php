@@ -266,7 +266,7 @@ WHERE p.id_user = '$id_user'
                                         <h2>Samsung Galaxy S9+</h2>
                                         <h3>Mulai dari <span>Rp10.000.000</span></h3>
                                         <div class="default-btn slide-btn">
-                                            <a class="links" href="shop-left-sidebar.html">Belanja Sekarang</a>
+                                            <a class="links" href="shop-left-sidebar.php">Belanja Sekarang</a>
                                         </div>
                                     </div>
                                 </div>
@@ -279,7 +279,7 @@ WHERE p.id_user = '$id_user'
                                         <h2>Microsoft Surface Studio</h2>
                                         <h3>Mulai dari <span>Rp35.000.000</span></h3>
                                         <div class="default-btn slide-btn">
-                                            <a class="links" href="shop-left-sidebar.html">Belanja Sekarang</a>
+                                            <a class="links" href="shop-left-sidebar.php">Belanja Sekarang</a>
                                         </div>
                                     </div>
                                 </div>
@@ -292,7 +292,7 @@ WHERE p.id_user = '$id_user'
                                         <h2>Drone DJI Phantom 4 Pro</h2>
                                         <h3>Mulai dari <span>Rp25.000.000</span></h3>
                                         <div class="default-btn slide-btn">
-                                            <a class="links" href="shop-left-sidebar.html">Belanja Sekarang</a>
+                                            <a class="links" href="shop-left-sidebar.php">Belanja Sekarang</a>
                                         </div>
                                     </div>
                                 </div>
@@ -442,7 +442,7 @@ WHERE p.id_user = '$id_user'
                                 <span> Rp2.000.000</span>
                             </p>
                             <div class="default-btn">
-                                <a href="shop-left-sidebar.html" class="links">Belanja Sekarang</a>
+                                <a href="shop-left-sidebar.php" class="links">Belanja Sekarang</a>
                             </div>
                         </div>
                         <!-- Li's Static Home Content Area End Here -->
